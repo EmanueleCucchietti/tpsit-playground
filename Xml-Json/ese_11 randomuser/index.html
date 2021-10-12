@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Verifica JSON</title>
+    <script type="application/javascript" src="json.js"></script>
+    <script type="application/javascript" src="index.js"></script>
+	<style>
+	    #wrapper{
+			width:160px;
+			margin: 20px auto;
+			background-color:#ffa;
+			font-size:18pt;
+			padding:20px;
+			padding-left:40px;
+			font-style:italic;
+			font-weight:bold;
+			border-radius:15px;
+			border:1px solid blue;
+	    }
+		
+		#table{
+			background-color:#ddd;
+			margin: 20px auto;
+			padding:10px;
+			width:700px;
+			border-radius:15px;
+			border:1px solid blue;
+		}
+		
+		#pulsanti{
+		    width:420px;
+			margin: 20px auto;
+			padding: 10px;
+		    background-color:#ffa;
+			border-radius:15px;
+			border:1px solid blue;
+			overflow:auto;
+		}
+		
+		#pulsanti input{
+			display : block;
+			float:left;
+		    width:80px;
+			margin:5px;
+			padding:10px;
+			text-align:center;
+			font-weight: 600;
+			border-radius:5px;
+		}
+		
+		#pulsanti p{
+			float:left;
+			width:25px;
+			margin:5px;
+			padding:10px;
+			text-align:center;
+			font-weight: 600;
+		}
+		
+		#dettagli{
+			background-color:#ddd;
+			margin: 20px auto;
+			padding:10px;
+			width:350px;
+			height:250px;
+			border-radius:15px;
+			border:1px solid blue;
+		}
+		
+	</style>
+	
+</head>
+<body>
+    <h1 style="text-align: center;">Anagrafica Comunale</h1>
+	<div id="wrapper">
+		<input type="radio" name="gender" id="optMale" checked> male <br>
+		<input type="radio" name="gender" id="optFemale"> female <br>
+	</div>
+	
+	<table id="table">
+	</table>
+	
+	<div id="pulsanti">
+		<input type="button" value="Primo" id="primoButton">
+		<input type="button" value="Indietro" id="indietroButton">
+		<p id="nPagina"> 1/4 </p>
+		<input type="button" value="Avanti" id="avantiButton">
+		<input type="button" value="Ultimo" id="ultimoButton">
+	</div>
+		
+	<div id="dettagli">
+
+	</div>
+		
+</body>
+</html>
+
