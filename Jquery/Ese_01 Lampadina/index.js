@@ -53,3 +53,7 @@ $(function()
     };
     contenuto.css(stileContenuto);
 });
+
+$(function(){
+	/* Function called before dom creation */
+});
