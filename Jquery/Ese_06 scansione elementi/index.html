@@ -1,0 +1,54 @@
+<! doctype html> 
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Esercizio 6</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+	<style>
+		#wrapper li {
+			margin: 5px;
+			width:200px;
+		}
+		ul{
+			list-style:none;
+		}
+	</style>
+</head>
+
+<body>
+	<br>
+	<h1 align="center"> Scansione Elementi  </h1>
+	
+<ul>
+   <li><a href="#" onclick="evidenzia('li:first-child')">    first-child</a></li>
+   <!--  La notazione "javascript:" consente di usare HREF al posto di onclick  -->
+   <li><a href="javascript:evidenzia('li:last-child');">     last-child </a></li>
+   <li><a href="javascript:evidenzia('li:nth-child(2)');">   nth-child(2)    </a></li>
+   <li><a href="javascript:evidenzia('li:nth-of-type(even)');">nth-child(even)</a></li>
+   <li><a href="javascript:evidenzia('li:nth-child(odd)');"> nth-child(odd)  </a></li>
+   <li><a href="javascript:evidenzia('li:nth-child(3n)');">  nth-child(3n)   </a></li>
+</ul>
+<br/>
+
+<ul id="wrapper">
+    <li>Menu 1 </li>
+    <li>Menu 2 </li>  
+    <li>Menu 3 </li>
+    <li>Menu 4 </li>
+    <li>Menu 5 </li>
+    <li>Menu 6 </li>
+    <li>Menu 7 </li>
+    <li>Menu 8 </li>
+    <li>Menu 9 </li>
+</ul>
+<br/>
+
+<input type="button" id="btn1" value="Conta n di elementi" >
+<input type="button" id="btn2" value="Visualizza testi">
+<input type="button" id="btn3" value="ricolora a sfondo giallo tutte le voci di menù con indice pari">
+<br> <br>
+<input type="button" id="btn4" value="ricolora le 5 voci di menù con indice dispari con un colore di sfondo verde con luminosità crescente (rispettivamente 50, 100, 150, 200, 250)">
+</body>
+</html>
