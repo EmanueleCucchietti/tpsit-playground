@@ -1,0 +1,83 @@
+body{
+	width:1300px;
+	margin:0 auto;
+}
+
+h1{
+	font-size:36pt;
+}
+
+#radioWrapper{
+	width:130px;
+	margin:15px 10px;
+	padding:5px;
+	background-color:#ffa;
+	font-size:12pt;
+	font-style:italic;
+	font-weight:bold;
+	border-radius:10px;
+	border:1px solid blue;
+	float:left;
+}
+#radioWrapper span{
+	padding-left:6px;
+}
+
+
+/* ************************ */
+
+#mainWrapper{
+	width:550px;
+	margin:0;
+	float:left;
+}
+
+#table{
+	width:500px;
+	margin: 15px auto;
+	padding:10px;
+	background-color:#ddd;
+	border-radius:10px;
+	border:1px solid blue;
+}
+
+#table img{
+	cursor:pointer;
+}
+
+/* ************************ */
+
+#buttonWrapper{
+	width:450px;
+	margin: 15px auto;
+	padding: 10px;
+	padding-left:40px;
+	background-color:#ffa;
+	border-radius:10px;
+	border:1px solid blue;
+}
+
+#buttonWrapper button, #buttonWrapper p{
+	display:inline-block;
+	width:80px;
+	margin:5px;
+	padding:10px;
+	text-align:center;
+	font-weight: 600;
+	border-radius:5px;
+}
+#buttonWrapper p{
+	width:25px;
+}
+
+#dettagliWrapper{
+	background-color:#ddd;
+	margin: 20px auto;
+	padding:10px;
+	width:480px;
+	height:360px;
+	border-radius:10px;
+	border:1px solid blue;
+	overflow:auto;
+	float:left;
+}
