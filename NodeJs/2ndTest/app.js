@@ -6,7 +6,9 @@ const rp = require('request-promise');
 const app=express();
 const bodyParser = require('body-parser');
 const fileupload = require("express-fileupload");
-let urlApi = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest";
+const path = require("path");
+let urlApi = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest";
+//let urlApi = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest";
 //let urlApi = "sandbox-api.coinmarketcap.com";
 
 
@@ -18,6 +20,8 @@ server.listen(PORT, function() {
     init();
 });
 let paginaErrore = "";
+let htmlReturnValue = "";
+let cssReturnValue = "";
 function init(req, res) {
     fs.readFile("./static/error.html", function(err, data) {
         if (!err)
@@ -25,6 +29,21 @@ function init(req, res) {
         else
             paginaErrore = "<h1>Risorsa non trovata</h1>"
     });
+    //PAGINA RETURN VALUE
+    fs.readFile("./static/returnValue.html",function(err,data){
+        console.log(data)
+        if (!err)
+            htmlReturnValue = data.toString();
+        else
+            htmlReturnValue = "<h1>Risorsa non trovata</h1>";
+    });
+    /*
+    fs.readFile("./static/returnValue.css", function(err,data){
+        if (!err)
+            cssReturnValue = data.toString();
+        else
+            cssReturnValue = "<h1>Risorsa non trovata</h1>";
+    });*/
 	// definizione di un nuovo metodo per il log dell'errore
 	app.response.log = function(err) {
         console.log(`*********** Error ********* ${err.message}`)
@@ -64,9 +83,12 @@ const requestOptions = {
     method: 'GET',
     uri: urlApi,
     qs: {
+        // QS INDICA I PARAMETRI CHE NORMALMENTE VENGONO PASSATI IN GET NELL'URL
+        /*
         'start': '1',
         'limit': '5000',
-        'convert': 'EUR'
+        'convert': 'EUR'*/
+        'symbol': "BTC,ETH,BNB,SOL,ADA,XRP,DOT,LUNA,AVAX,MATIC,CRO"
     },
     headers: {
         //'X-CMC_PRO_API_KEY': 'b54bcf4d-1bca-4e8e-9a24-22ff2c3d462c'
@@ -78,7 +100,7 @@ const requestOptions = {
     gzip: true
 };
 
-apiCall();
+//apiCall();
 //setInterval(apiCall,1000);
 
 function apiCall(){
@@ -88,6 +110,14 @@ function apiCall(){
         console.log('API call error:', err.message);
     });
 }
+
+/* ********************** PAGINE HTML  ************************ */
+app.set("returnValue", path.join(__dirname, "returnValue"));
+app.set("view engine", "html");
+app.get('/static/returnValue', function(req, res, next){
+    res.send(htmlReturnValue);
+    //res.send(cssReturnValue);
+})
 
 /* ********************** (SEZIONE 2) CLIENT REQUEST  ************************ */
 
