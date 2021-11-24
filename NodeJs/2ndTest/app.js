@@ -22,6 +22,7 @@ server.listen(PORT, function() {
 let paginaErrore = "";
 let htmlReturnValue = "";
 let cssReturnValue = "";
+let jsonCryptoCoins = "";
 function init(req, res) {
     fs.readFile("./static/error.html", function(err, data) {
         if (!err)
@@ -36,6 +37,12 @@ function init(req, res) {
             htmlReturnValue = data.toString();
         else
             htmlReturnValue = "<h1>Risorsa non trovata</h1>";
+    })
+    ;fs.readFile("./jsonFiles/cryptoCoins.js",function(err,data){
+        if (!err)
+            jsonCryptoCoins = data.toString();
+        else
+        jsonCryptoCoins = "<h1>Risorsa non trovata</h1>";
     });
     /*
     fs.readFile("./static/returnValue.css", function(err,data){
@@ -86,8 +93,8 @@ const requestOptions = {
         // QS INDICA I PARAMETRI CHE NORMALMENTE VENGONO PASSATI IN GET NELL'URL
         /*
         'start': '1',
-        'limit': '5000',
-        'convert': 'EUR'*/
+        'limit': '5000'*/
+        'convert': 'EUR',
         'symbol': "BTC,ETH,BNB,SOL,ADA,XRP,DOT,LUNA,AVAX,MATIC,CRO"
     },
     headers: {
@@ -116,6 +123,7 @@ app.set("returnValue", path.join(__dirname, "returnValue"));
 app.set("view engine", "html");
 app.get('/static/returnValue', function(req, res, next){
     res.send(htmlReturnValue);
+    res.send(jsonCryptoCoins);
     //res.send(cssReturnValue);
 })
 
@@ -134,6 +142,9 @@ app.get('/api/richiestaGet', function(req, res, next) {
        res.json("good morning " + nome + " La tua eta è " + eta);
        //res.send({ "nome": nome, "eta": eta })
 });
+app.get('/api/requestJson',function(req,res,next){
+    res.json(requestOptions);
+})
 
 
 /* **********************  DEFAULT ROUTE  ************************* */
