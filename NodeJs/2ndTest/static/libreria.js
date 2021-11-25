@@ -8,6 +8,7 @@ function inviaRichiesta(method, url, parameters = {}) {
         parameters = JSON.stringify(parameters);
     }
 
+    
     return $.ajax({
         url: url, //default: currentPage
         type: method,

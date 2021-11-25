@@ -7,9 +7,12 @@ const app=express();
 const bodyParser = require('body-parser');
 const fileupload = require("express-fileupload");
 const path = require("path");
+const { response } = require('express');
 let urlApi = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest";
 //let urlApi = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest";
 //let urlApi = "sandbox-api.coinmarketcap.com";
+
+const currency = 'USD';
 
 
 /* ***************************** Avvio Server ****************************** */
@@ -22,7 +25,8 @@ server.listen(PORT, function() {
 let paginaErrore = "";
 let htmlReturnValue = "";
 let cssReturnValue = "";
-let jsonCryptoCoins = "";
+let jsonCryptoCoins;
+let jsonFiatCoins;
 function init(req, res) {
     fs.readFile("./static/error.html", function(err, data) {
         if (!err)
@@ -37,12 +41,22 @@ function init(req, res) {
             htmlReturnValue = data.toString();
         else
             htmlReturnValue = "<h1>Risorsa non trovata</h1>";
-    })
-    ;fs.readFile("./jsonFiles/cryptoCoins.js",function(err,data){
-        if (!err)
-            jsonCryptoCoins = data.toString();
+    });
+    fs.readFile("./jsonFiles/cryptoCoins.json",function(err,data){
+        if (!err){
+            jsonCryptoCoins = JSON.parse(data)
+            console.log(jsonCryptoCoins)
+        }
         else
         jsonCryptoCoins = "<h1>Risorsa non trovata</h1>";
+    });
+    fs.readFile("./jsonFiles/fiatCoins.json",function(err,data){
+        if (!err){
+            jsonFiatCoins = JSON.parse(data)
+            console.log(jsonFiatCoins)
+        }
+        else
+        jsonFiatCoins = "<h1>Risorsa non trovata</h1>";
     });
     /*
     fs.readFile("./static/returnValue.css", function(err,data){
@@ -94,7 +108,7 @@ const requestOptions = {
         /*
         'start': '1',
         'limit': '5000'*/
-        'convert': 'EUR',
+        'convert': currency,
         'symbol': "BTC,ETH,BNB,SOL,ADA,XRP,DOT,LUNA,AVAX,MATIC,CRO"
     },
     headers: {
@@ -107,15 +121,51 @@ const requestOptions = {
     gzip: true
 };
 
-//apiCall();
+prepareDataFromApi();
+function prepareDataFromApi(){
+    apiCall();
+}
 //setInterval(apiCall,1000);
 
 function apiCall(){
+
     rp(requestOptions).then(response => {
         console.log('API call response:', response);
+      }).catch((err) => {
+        console.log('API call error:', err.message);
+      });
+
+    rp(requestOptions).then(response => {
+        let returnedJson = response;
+        addElementsToJson(returnedJson);
     }).catch((err) => {
         console.log('API call error:', err.message);
     });
+}
+function addElementsToJson(returnedJson){
+    console.log(returnedJson.data)
+    console.log("test")
+    
+    for (const key in returnedJson.data) {
+        if (Object.hasOwnProperty.call(returnedJson.data, key)) {
+            const coin = returnedJson.data[key];
+            let price = coin.quote[currency].price;
+            jsonCryptoCoins[key].price = price;
+            console.log(jsonCryptoCoins[key])
+        }
+    }
+
+    /*
+    for (const key in returnedJson.data) {
+        console.log("test")
+        console.log(key)
+        if (Object.hasOwnProperty.call(response.data, key)) {
+            console
+        console.log(response.data[key].price)
+        jsonCryptoCoins[key].price = response.data[key].price
+            
+        }
+    }*/
 }
 
 /* ********************** PAGINE HTML  ************************ */
@@ -143,9 +193,16 @@ app.get('/api/richiestaGet', function(req, res, next) {
        //res.send({ "nome": nome, "eta": eta })
 });
 app.get('/api/requestJson',function(req,res,next){
-    res.json(requestOptions);
+    res.send("Not anymore supported");
+    /*
+    res.json(jsonCryptoCoins);*/
 })
-
+app.get('/api/richiestaCryptoCurrency', function(req,res,next){
+    res.send(jsonCryptoCoins);
+});
+app.get('/api/richiestaFiatCurrency', function(req,res,next){
+    res.send(jsonFiatCoins);
+});
 
 /* **********************  DEFAULT ROUTE  ************************* */
 
