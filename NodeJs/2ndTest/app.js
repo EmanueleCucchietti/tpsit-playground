@@ -109,7 +109,7 @@ const requestOptions = {
         'start': '1',
         'limit': '5000'*/
         'convert': currency,
-        'symbol': "BTC,ETH,BNB,SOL,ADA,XRP,DOT,LUNA,AVAX,MATIC,CRO"
+        'symbol': "BTC,ETH,BNB,SOL,ADA,XRP,DOT,LUNA,AVAX,MATIC,CRO" 
     },
     headers: {
         //'X-CMC_PRO_API_KEY': 'b54bcf4d-1bca-4e8e-9a24-22ff2c3d462c'
