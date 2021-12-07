@@ -1,0 +1,39 @@
+{
+    "BTC": {
+        "Name": "Bitcoin",
+        "prices": {
+            "USD": "",
+            "EUR": ""
+        }
+    },
+    "ETH": {
+        "Name": "Ether"
+    },
+    "BNB": {
+        "Name": "Binance Coin"
+    },
+    "SOL": {
+        "Name": "SOLANA"
+    },
+    "ADA": {
+        "Name": "Cardano"
+    },
+    "XRP": {
+        "Name": "Ripple"
+    },
+    "DOT": {
+        "Name": "Polkadot"
+    },
+    "LUNA": {
+        "Name": "Terra"
+    },
+    "AVAX": {
+        "Name": "Avalanche"
+    },
+    "MATIC": {
+        "Name": "Poligon"
+    },
+    "CRO": {
+        "Name": "Crypto.com"
+    }
+}
