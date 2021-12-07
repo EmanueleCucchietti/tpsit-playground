@@ -12,9 +12,10 @@ let urlApi = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest"
 //let urlApi = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest";
 //let urlApi = "sandbox-api.coinmarketcap.com";
 
-const currency = 'USD';
+let currency;
 const keyApi = '';
 
+const timeToRecall = 2880000;
 
 /* ***************************** Avvio Server ****************************** */
 const PORT = 1337
@@ -26,9 +27,7 @@ server.listen(PORT, function() {
 let paginaErrore = "";
 let htmlReturnValue = "";
 let cssReturnValue = "";
-let jsonCurrencys;
-let arrayFiatCurrencysName;
-let currencysData = new Array();
+let jsonCryptoCoins;
 function init(req, res) {
     fs.readFile("./static/error.html", function(err, data) {
         if (!err)
@@ -38,35 +37,19 @@ function init(req, res) {
     });
     //PAGINA RETURN VALUE
     fs.readFile("./static/returnValue.html",function(err,data){
-        console.log(data)
         if (!err)
             htmlReturnValue = data.toString();
         else
             htmlReturnValue = "<h1>Risorsa non trovata</h1>";
     });
-    fs.readFile("./jsonFiles/Currencys.json",function(err,data){
+    fs.readFile("./jsonFiles/cryptoCoins.json",function(err,data){
         if (!err){
-            jsonCurrencys = JSON.parse(data)
-            console.log(jsonCurrencys)
+            jsonCryptoCoins = JSON.parse(data)
         }
         else
-        jsonCurrencys = "<h1>Risorsa non trovata</h1>";
+        jsonCryptoCoins = "<h1>Risorsa non trovata</h1>";
     });
-    fs.readFile("./jsonFiles/fiatCoins.json",function(err,data){
-        if (!err){
-            arrayFiatCurrencysName = JSON.parse(data)
-            console.log(arrayFiatCurrencysName)
-        }
-        else
-        arrayFiatCurrencysName = "<h1>Risorsa non trovata</h1>";
-    });
-    /*
-    fs.readFile("./static/returnValue.css", function(err,data){
-        if (!err)
-            cssReturnValue = data.toString();
-        else
-            cssReturnValue = "<h1>Risorsa non trovata</h1>";
-    });*/
+
 	// definizione di un nuovo metodo per il log dell'errore
 	app.response.log = function(err) {
         console.log(`*********** Error ********* ${err.message}`)
@@ -118,39 +101,37 @@ const requestOptions = {
         
         //Pro Key
         'X-CMC_PRO_API_KEY': keyApi
-    },
+        },
     json: true,
     gzip: true
 };
-
 prepareDataFromApi();
-function prepareDataFromApi(){
-    for (const [i,fiatCoin] of arrayFiatCurrencysName.entries()) {
-        keyApi = fiatCoin;
-        currencysData[i] = apiCall();
-    }
-}
-//setInterval(apiCall,1000);
+setInterval(prepareDataFromApi,timeToRecall);
 
-function apiCall(){
+function prepareDataFromApi(){
+    apiCall("USD");
+    apiCall("EUR");
+}
+
+function apiCall(currency){
+    requestOptions.qs.convert = currency;
     rp(requestOptions).then(response => {
-        return response;
+        let returnedJson = response;
+        addElementsToJson(returnedJson,currency);
     }).catch((err) => {
         console.log('API call error:', err.message);
-        return response;
     });
 }
-function addElementsToJson(returnedJson){
-    /*
-    for (const key in jsonCurrencys) {
-        if (Object.hasOwnProperty.call(object, key)) {
-            const element = object[key];
-            
+function addElementsToJson(returnedJson, currency){
+    for (const key in returnedJson.data) {
+        if (Object.hasOwnProperty.call(returnedJson.data, key)) {
+            const element = returnedJson.data[key];
+            if(jsonCryptoCoins[key].prices == undefined)
+                jsonCryptoCoins[key].prices = {};
+            jsonCryptoCoins[key].prices[currency] = element.quote[currency].price;
         }
     }
-    */
-    console.log(returnedJson.data)
-    console.log("test")
+    console.log(jsonCryptoCoins)
 }
 
 /* ********************** PAGINE HTML  ************************ */
@@ -158,6 +139,7 @@ app.set("returnValue", path.join(__dirname, "returnValue"));
 app.set("view engine", "html");
 app.get('/static/returnValue', function(req, res, next){
     res.send(htmlReturnValue);
+    res.send(jsonCryptoCoins);
     //res.send(cssReturnValue);
 })
 
@@ -181,10 +163,9 @@ app.get('/api/requestJson',function(req,res,next){
     /*
     res.json(jsonCryptoCoins);*/
 })
-app.get('/api/richiestaCurrencys', function(req,res,next){
-    res.send(jsonCurrencys);
+app.get('/api/richiestaCryptoCurrency', function(req,res,next){
+    res.send(jsonCryptoCoins);
 });
-
 /* **********************  DEFAULT ROUTE  ************************* */
 
 // default route

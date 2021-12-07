@@ -2,8 +2,7 @@ $(document).ready(function() {
     let wrapperCurrencysCryptoSelect = $("#cmbBoxSelectCryptoCurrencys");
     let wrapperCurrencysFiatSelect = $("#cmbBoxSelectFiatCurrencys");
 
-    let CurrencysCrypto;
-    let CurrencysFiat;
+    let Currencys;
 
     $.ajax({
         type: "GET",
@@ -11,33 +10,17 @@ $(document).ready(function() {
         //url: '/api/richiestaCryptoCurrency?currency=USD',
         dataType: "json",
         success: function(jsonCurrency){
-            CurrencysCrypto = jsonCurrency
+            CurrencysCrypto = jsonCurrency;
             // è necessario riempire qua il wrapper perchè è asincrona?
-            caricaWrapperCurrencySelect(jsonCurrency, wrapperCurrencysCryptoSelect);
+            caricaWrapperCryptoSelect(CurrencysCrypto, wrapperCurrencysCryptoSelect);
+            caricaWrapperFiatSelect(CurrencysCrypto, wrapperCurrencysFiatSelect);
         },
         error: function(msg){
             console.log(msg) 
         }
     })
 
-    $.ajax({
-        type: "GET",
-        url: '/api/richiestaFiatCurrency',
-        dataType: "json",
-        success: function(jsonCurrency){
-            CurrencysFiat = jsonCurrency;
-            // è necessario riempire qua il wrapper perchè è asincrona?
-            caricaWrapperCurrencySelect(jsonCurrency, wrapperCurrencysFiatSelect);
-        },
-        error: function(msg){
-            console.log(msg) 
-        }
-    })
-
-    
-    
-
-    function caricaWrapperCurrencySelect(jsonCurrency, wrapper){
+    function caricaWrapperCryptoSelect(jsonCurrency, wrapper){
         for (const key in jsonCurrency) {
             if (Object.hasOwnProperty.call(jsonCurrency, key)) {
                 const element = jsonCurrency[key];
@@ -46,6 +29,30 @@ $(document).ready(function() {
                     'html': element.Name,
                     'value': element.Name
                 })
+            }
+        }
+    }
+    function caricaWrapperFiatSelect(jsonCurrency, wrapper){
+        let firstCryptoProperty;
+        for (const keyBtc in CurrencysCrypto) {
+            if (Object.hasOwnProperty.call(CurrencysCrypto, keyBtc)) {
+                firstCryptoProperty = keyBtc;
+                break ;
+            }
+        }
+        console.log(firstCryptoProperty)
+        for (const key in CurrencysCrypto[firstCryptoProperty].prices) {
+            if (Object.hasOwnProperty.call(CurrencysCrypto[firstCryptoProperty].prices, key)) {
+                $("<option>", {
+                    'appendTo': wrapper,
+                    'html': key,
+                    'value': key
+                })
+            }
+        }
+
+        for (const key in jsonCurrency) {
+            if (Object.hasOwnProperty.call(jsonCurrency, key)) {
             }
         }
     }
@@ -61,6 +68,7 @@ $(document).ready(function() {
         let cryptoLabel = $("#inputCrypto");
         let fiatLabel = $("#inputFiat");
         let cryptoSelected = $("#cmbBoxSelectCryptoCurrencys").prop("value");
+        let fiatSelected = $("#cmbBoxSelectFiatCurrencys").prop("value");
         let convertedValue;
 
         for (const key in CurrencysCrypto) {
@@ -73,15 +81,17 @@ $(document).ready(function() {
                 }
             }
         }
-        
-        convertedValue = cryptoLabel.prop("value") * CurrencysCrypto[cryptoSelected].price;
 
-        fiatLabel.prop("value",convertedValue)
+        convertedValue = cryptoLabel.prop("value") * CurrencysCrypto[cryptoSelected].prices[fiatSelected];
+        if(!isNaN(convertedValue))
+            fiatLabel.prop("value",convertedValue)
+        else
+            fiatLabel.prop("value","Selezionare entrambi i campi e definire valori corretti")
     }
 
     // EVENT HANDLER    
     $("#cmbBoxSelectCryptoCurrencys").on("change",setPlaceHolderCmbCrypto && convertiCrypto)
-    $("#cmbBoxSelectFiatCurrencys").on("change",setPlaceHolderCmbFiat)
+    $("#cmbBoxSelectFiatCurrencys").on("change",setPlaceHolderCmbFiat && convertiCrypto)
     $("#inputCrypto").on("input", convertiCrypto);
 
 });
