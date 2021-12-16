@@ -1,6 +1,8 @@
 "use strict";
 
-function inviaRichiesta(method, url, parameters={}) {
+const URL = "http://localhost:3000";
+
+function inviaRichiesta(method, url, parameters={}) {  //se non lo metto lui imposta parameters vuoto, siccome è un parametro FACOLTATIVO. 
 	let contentType;
 	if(method.toUpperCase()=="GET")
 		contentType="application/x-www-form-urlencoded;charset=utf-8";
@@ -8,25 +10,15 @@ function inviaRichiesta(method, url, parameters={}) {
 		contentType = "application/json; charset=utf-8"
         parameters = JSON.stringify(parameters);
 	}
-    /*
-    let promise = $.ajax({
-        "url": url,
-		"data": parameters,
-		"type": method,   
-		"contentType": contentType, 
-        "dataType": "json",   // default      
-        "timeout": 5000,      // default 
-    })
-    return promise;
-    */
-    return $.ajax({
-        "url": url,
+    let promise = $.ajax({ //lui return una promise (quindi gestiamo success and error lato HTML)
+        "url": URL+url,
 		"data": parameters,
 		"type": method,   
 		"contentType": contentType, 
         "dataType": "json",   // default      
         "timeout": 5000,      // default 
     });	
+    return promise;
 }
 
 
