@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="returnValue.css">
+    <script src="returnValue.js"></script>
+    <title>EdCivica Emanuele Cucchietti</title>
+    
+        body {
+            background-position: relative !important;
+            background-repeat: no-repeat;
+            background-attachment: fixed !important;
+            background-size: 400% 400% !important;
+            background: linear-gradient(-45deg, #C231E8, #E73C7E, #EE7752, #25E8A0, #19a1d3, #612ae0);
+            animation: change 40s cubic-bezier(.39, 0, .63, 1.01) infinite !important;
+        }
+
+        #bgImg {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            /* da mettere auto !IMPOORTANT!*/
+            margin: 0;
+            min-height: 35rem;
+            padding: 5rem 0;
+
+        }
+
+        @keyframes change {
+            0% {
+                background-position: 0 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0 50%;
+            }
+        }
+
+        #container1 {
+            border-radius: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <dir id="bgImg" class="img-fluid">
+        <div class="container bg-gradient" id="container1">
+            <!-- APRE HEADER -->
+            <div class="row" id="header">
+                <div class="card-title justify-content-center">
+
+                    <!-- APRE TITOLO -->
+                    <p class="h1 text-center">
+                        Convertitore Criptovalute ad Euro
+                    </p>
+                    <!-- CHIUDE TITOLO-->
+
+                    <!-- APRE SOTTOTITOLO -->
+                    <div class="container-fluid">
+                        <div class="row justify-content-center">
+                            <div class="col-sm-10 col-md-8">
+                                <p class="h3 text-center">
+                                    Selezionare una singola valuta oppure tutte </br>
+                                    Una volta inserito il capitale si potrà rilevare la conversione in Euro
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CHIUDE SOTTOTITOLO-->
+
+                </div>
+            </div> <!-- Finito -->
+            <!-- CHIUDE HEADER -->
+
+
+            <!-- APRE DOMANDA 1 CONTAINER-->
+            <div class="row justify-content-center">
+                <div class="col-3"></div>
+                <div class="col-sm-10 col-md-10 col-lg-10 m-3">
+
+                    <!-- APRE DOMANDA 1 -- CON LIST -->
+
+                    <div class="card" style="width: auto; padding: 1em; margin: 0;">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-8"><select class="form-select" aria-label="Default select example">
+                                    <option selected>Seleziona le Criptovalute</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                  </select>
+                                 </div>
+                                 <div class="col-4"><button href="#" class="btn btn-primary active" aria-current="page">Oppure selezionale tutte</button></div>
+                            </div> 
+                        </div>
+                    </div>
+
+                    <!-- CHIUDE DOMANDA 1 -- CON LIST-->
+
+                </div>
+                <div class="col-3"></div>
+            </div> <!-- Finito -->
+            <!-- CHIUDE DOMANDA 1 CONTAINER-->
+
+            <!-- APRE DOMANDA 2 CONTAINER-->
+            <div class="row justify-content-center">
+                <div class="col-3"></div>
+                <div class="col-sm-10 col-md-10 col-lg-10 m-3">
+
+                    <!-- APRE DOMANDA 2 -- CON LIST -->
+
+                    <div class="card" style="width: auto; padding: 1em; margin: 0;">
+                        <div class="card-body">
+                            <h5 class="card-title">Amici o parenti si sono mai preoccupati per la quantità di tempo che
+                                trascorri sullo smartphone?</h5>
+
+                            <div id="form2">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="reRdbtn2" id="reRdbtn2-0" checked
+                                        autocomplete="off">
+                                    <label class="form-check-label" for="reRdbtn2-0">
+                                        Decisamente sì
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="reRdbtn2" id="reRdbtn2-1"
+                                        autocomplete="off">
+                                    <label class="form-check-label" for="reRdbtn2-1">
+                                        Più sì che no
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="reRdbtn2" id="reRdbtn2-2"
+                                        autocomplete="off">
+                                    <label class="form-check-label" for="reRdbtn2-2">
+                                        Più no che sì
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="reRdbtn2" id="reRdbtn2-3"
+                                        autocomplete="off">
+                                    <label class="form-check-label" for="reRdbtn2-3">
+                                        Decisamente No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CHIUDE DOMANDA 2 -- CON LIST-->
+
+                </div>
+                <div class="col-3"></div>
+            </div> <!-- Finito -->
+            <!-- CHIUDE DOMANDA 2 CONTAINER-->
+
+            <!-- APRE DOMANDA 3 CONTAINER-->
+            <div class="row justify-content-center">
+                <div class="col-3"></div>
+                <div class="col-sm-10 col-md-10 col-lg-10 m-3">
+
+                    <!-- APRE DOMANDA 3 -- CON LIST -->
+
+                    <div class="card" style="width: auto; padding: 1em; margin: 0;">
+                        <div class="card-body">
+                            <h5 class="card-title">Ti capita di stabilire nuovi rapporti con altri utenti online?</h5>
+
+                            <div id="form1">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="reRdbtn3" id="reRdbtn3-0" checked
+                                        autocomplete="off">
+                                    <label class="form-check-label" for="reRdbtn3-0">
+                                        Decisamente sì
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="reRdbtn3" id="reRdbtn3-1"
+                                        autocomplete="off">
+                                    <label class="form-check-label" for="reRdbtn3-1">
+                                        Più sì che no
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="reRdbtn3" id="reRdbtn3-2"
+                                        autocomplete="off">
+                                    <label class="form-check-label" for="reRdbtn3-2">
+                                        Più no che sì
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="reRdbtn3" id="reRdbtn3-3"
+                                        autocomplete="off">
+                                    <label class="form-check-label" for="reRdbtn3-3">
+                                        Decisamente No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CHIUDE DOMANDA 3 -- CON LIST-->
+
+                </div>
+                <div class="col-3"></div>
+            </div> <!-- Finito -->
+            <!-- CHIUDE DOMANDA 3 CONTAINER-->
+
+            <!-- APRE DOMANDA 4 CONTAINER-->
+            <div class="row justify-content-center">
+                <div class="col-3"></div>
+                <div class="col-sm-10 col-md-10 col-lg-10 m-3">
+
+                    <!-- APRE DOMANDA 4 -- CON LIST -->
+
+                    <div class="card" style="width: auto; padding: 1em; margin: 0;">
+                        <div class="card-body">
+                            <h5 class="card-title">Accade che i tuoi studi risentano negativamente della quantità di
+                                tempo che passi online?</h5>
+
+                            <div id="form1">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="reRdbtn4" id="reRdbtn4-0" checked
+                                        autocomplete="off">
+                                    <label class="form-check-label" for="reRdbtn4-0">
+                                        Decisamente sì
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="reRdbtn4" id="reRdbtn4-1"
+                                        autocomplete="off">
+                                    <label class="form-check-label" for="reRdbtn4-1">
+                                        Più sì che no
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="reRdbtn4" id="reRdbtn4-2"
+                                        autocomplete="off">
+                                    <label class="form-check-label" for="reRdbtn4-2">
+                                        Più no che sì
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="reRdbtn4" id="reRdbtn4-3"
+                                        autocomplete="off">
+                                    <label class="form-check-label" for="reRdbtn4-3">
+                                        Decisamente No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CHIUDE DOMANDA 4 -- CON LIST-->
+
+                </div>
+                <div class="col-3"></div>
+            </div> <!-- Finito -->
+            <!-- CHIUDE DOMANDA 4 CONTAINER-->
+
+            <!-- APRE DOMANDA 5 CONTAINER-->
+            <div class="row justify-content-center">
+                <div class="col-3"></div>
+                <div class="col-sm-10 col-md-10 col-lg-10 m-3">
+
+                    <!-- APRE DOMANDA 5 -- CON LIST -->
+
+                    <div class="card" style="width: auto; padding: 1em; margin: 0;">
+                        <div class="card-body">
+                            <h5 class="card-title">Ti capita di perdere ore di sonno perché rimani alzato fino a tardi
+                                davanti al pc?</h5>
+
+                            <div id="form1">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="reRdbtn5" id="reRdbtn5-0" checked
+                                        autocomplete="off">
+                                    <label class="form-check-label" for="reRdbtn5-0">
+                                        Decisamente sì
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="reRdbtn5" id="reRdbtn5-1"
+                                        autocomplete="off">
+                                    <label class="form-check-label" for="reRdbtn5-1">
+                                        Più sì che no
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="reRdbtn5" id="reRdbtn5-2"
+                                        autocomplete="off">
+                                    <label class="form-check-label" for="reRdbtn5-2">
+                                        Più no che sì
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="reRdbtn5" id="reRdbtn5-3"
+                                        autocomplete="off">
+                                    <label class="form-check-label" for="reRdbtn5-3">
+                                        Decisamente No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CHIUDE DOMANDA 5 -- CON LIST-->
+
+                </div>
+                <div class="col-3"></div>
+            </div> <!-- Finito -->
+            <!-- CHIUDE DOMANDA 5 CONTAINER-->
+
+            <!-- APRE DOMANDA 6 CONTAINER-->
+            <div class="row justify-content-center">
+                <div class="col-3"></div>
+                <div class="col-sm-10 col-md-10 col-lg-10 m-3">
+
+                    <!-- APRE DOMANDA 1 -- CON TEXT AREA -->
+
+                    <div class="card" style="width: auto; padding: 1em; margin: 0;">
+                        <div class="card-body">
+                            <h5 class="card-title">Ti è mai capitato di assistere ad atti di cyber-bullismo? come hai
+                                reagito?</h5>
+
+                            <div class="form-floating">
+                                <textarea class="form-control" placeholder="Scrivi Qui" id="reTxtArea6-0"
+                                    style="height: 100px" autocomplete="off"></textarea>
+                                <label for="rdTxtArea6-0">Scrivi Qui</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CHIUDE DOMANDA 6 -- CON TEXT AREA-->
+
+                </div>
+                <div class="col-3"></div>
+            </div> <!-- Finito -->
+            <!-- CHIUDE DOMANDA 6 CONTAINER-->
+
+            <!-- APRE DOMANDA 7 CONTAINER-->
+            <div class="row justify-content-center">
+                <div class="col-3"></div>
+                <div class="col-sm-10 col-md-10 col-lg-10 m-3">
+
+                    <!-- APRE DOMANDA 7 -- CON LIST -->
+
+                    <div class="card" style="width: auto; padding: 1em; margin: 0;">
+                        <div class="card-body">
+                            <h5 class="card-title">Come reagisci se una persona ti insulta o ti offende?</h5>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="reChkbtn7-0"
+                                    autocomplete="off">
+                                <label class="form-check-label" for="reChkbtn7-0">
+                                    La attacco a mia volta a parole o fisicamente
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="reChkbtn7-1"
+                                    autocomplete="off">
+                                <label class="form-check-label" for="reChkbtn7-1">
+                                    Mi deprimo e subisco l'attacco
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="reChkbtn7-2"
+                                    autocomplete="off">
+                                <label class="form-check-label" for="reChkbtn7-2">
+                                    Rido o ci scherzo sù
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="reChkbtn7-3"
+                                    autocomplete="off">
+                                <label class="form-check-label" for="reChkbtn7-3">
+                                    Chiedo aiuto a qualcuno
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="reChkbtn7-4"
+                                    autocomplete="off">
+                                <label class="form-check-label" for="_reChkbtn7-4">
+                                    Mi isolo
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CHIUDE DOMANDA 7 -- CON LIST-->
+
+                </div>
+                <div class="col-3"></div>
+            </div> <!-- Finito -->
+            <!-- CHIUDE DOMANDA 7 CONTAINER-->
+
+            <!-- APRE DOMANDA 8 CONTAINER-->
+            <div class="row justify-content-center">
+                <div class="col-3"></div>
+                <div class="col-sm-10 col-md-10 col-lg-10 m-3">
+
+                    <!-- APRE DOMANDA 8 -- CON LIST -->
+
+                    <div class="card" style="width: auto; padding: 1em; margin: 0;">
+                        <div class="card-body">
+                            <h5 class="card-title">Ti fai foto intime o provocanti e le invii o le posti online?</h5>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="reChkbtn8-0"
+                                    autocomplete="off">
+                                <label class="form-check-label" for="reChkbtn8-0">
+                                    No, non mi faccio foto intime
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="reChkbtn8-1"
+                                    autocomplete="off">
+                                <label class="form-check-label" for="reChkbtn8-1">
+                                    Le invio in forma privata a persone di cui mi fido
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="reChkbtn8-2"
+                                    autocomplete="off">
+                                <label class="form-check-label" for="reChkbtn8-2">
+                                    Ho messo online foto provocanti per ottenere dei "mi piace"
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="reChkbtn8-3"
+                                    autocomplete="off">
+                                <label class="form-check-label" for="reChkbtn8-3">
+                                    Ho trovato le mie foto intime online senza che lo volessi
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CHIUDE DOMANDA 8 -- CON LIST-->
+
+                </div>
+                <div class="col-3"></div>
+            </div> <!-- Finito -->
+            <!-- CHIUDE DOMANDA 8 CONTAINER-->
+
+            <!-- APRE DOMANDA 9 CONTAINER-->
+            <div class="row justify-content-center">
+                <div class="col-3"></div>
+                <div class="col-sm-10 col-md-10 col-lg-10 m-3">
+
+                    <!-- APRE DOMANDA 9 -- CON LIST -->
+
+                    <div class="card" style="width: auto; padding: 1em; margin: 0;">
+                        <div class="card-body">
+                            <div class="card-body">
+                                <h5 class="card-title">Hai un amico che è in difficoltà e lo stai aiutando / necessita
+                                    di aiuto? </h5>
+
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Scrivi Qui" id="reTxtArea9-0"
+                                        style="height: 100px" autocomplete="off"></textarea>
+                                    <label for="reTxtArea9-0">Scrivi Qui</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CHIUDE DOMANDA 9 -- CON LIST-->
+
+                </div>
+                <div class="col-3"></div>
+            </div> <!-- Finito -->
+            <!-- CHIUDE DOMANDA 9 CONTAINER-->
+
+            <!-- APRE DOMANDA 10 CONTAINER-->
+            <div class="row justify-content-center">
+                <div class="col-3"></div>
+                <div class="col-sm-10 col-md-10 col-lg-10 m-3">
+
+                    <!-- APRE DOMANDA 10 -- CON LIST -->
+
+                    <div class="card" style="width: auto; padding: 1em; margin: 0;">
+                        <div class="card-body">
+                            <div class="card-body">
+                                <h5 class="card-title">Cosa ne pensi dei Social Network? Sono positivi o negativi
+                                    secondo te? </h5>
+
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Scrivi Qui" id="reTxtArea10-0"
+                                        style="height: 100px" autocomplete="off"></textarea>
+                                    <label for="reTxtArea10-0">Scrivi Qui</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CHIUDE DOMANDA 10 -- CON LIST-->
+
+                </div>
+                <div class="col-3"></div>
+            </div> <!-- Finito -->
+            <!-- CHIUDE DOMANDA 10 CONTAINER-->
+
+            <!-- APRE BUTTON CONTAINER-->
+            <div class="row justify-content-center">
+                <div class="col-3"></div>
+                <div class="col-sm-10 col-md-10 col-lg-10 m-3">
+
+                    <!-- APRE CARD BUTTON -->
+
+                    <div class="card" style="width: auto; padding: 1em; margin: 0;">
+                        <div class="card-body">
+                            <div class="card-body">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-6 align-items-center">
+                                            <button type="button" class="btn btn-primary" style="width: 100%;"
+                                                id="btnInvia">Invia</button>
+
+                                        </div>
+                                        <div class="col-6 align-items-center">
+                                            <button type="button" class="btn btn-primary" style="width: 100%"
+                                                id="btnLeggi">Leggi Local Storage</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CHIUDE CARD BUTTON -->
+
+                </div>
+                <div class="col-3"></div>
+            </div> <!-- Finito -->
+            <!-- CHIUDE BUTTON CONTAINER-->
+        </div>
+    </dir>
+
+</body>
+
+</html>

@@ -165,6 +165,7 @@ app.get('/api/requestJson',function(req,res,next){
 })
 app.get('/api/richiestaCryptoCurrency', function(req,res,next){
     res.send(jsonCryptoCoins);
+    console.log(jsonCryptoCoins)
 });
 /* **********************  DEFAULT ROUTE  ************************* */
 
