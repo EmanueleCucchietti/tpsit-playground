@@ -2,6 +2,8 @@
 let X_OFFSET = 180
 let Y_OFFSET = 210;
 const MMG = 24*3600*1000 // msec in un giorno
+let prenotazioni = []
+
 $(document).ready(function(){	
 		
 	let _wrapper = $("#wrapper");
@@ -57,6 +59,8 @@ $(document).ready(function(){
 							{
 								div.addClass("red");
 							}
+							else
+								div.on("click",ombrelloneClick)
 							id++;
 						}
 					}
@@ -69,7 +73,25 @@ $(document).ready(function(){
 	})
 
 	function isOccupato(statoOmbrellone){
-		return true;
+		let pos1 = (new Date(_dataInizio.val())-new Date(_dataInizio.prop("min")))/MMG;
+		let pos2 = (new Date(_dataFine.val())-new Date(_dataInizio.prop("min")))/MMG;
+		for(let i=pos1;i<=pos2;i++)
+			if(statoOmbrellone[i]!=0)
+				return true;
+		return ;
+	}
+
+	function ombrelloneClick(){
+		console.log(prenotazioni)
+		if($(this).hasClass("blue")){
+			$(this).removeClass("blue")
+			let index = prenotazioni.indexOf($(this).prop("id"))
+			prenotazioni.splice(index,1);
+		}
+		else{
+			$(this).addClass("blue")
+			prenotazioni.push($(this).prop("id"))
+		}
 	}
 	
 
