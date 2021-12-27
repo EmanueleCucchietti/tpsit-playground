@@ -17,7 +17,8 @@ $(function () {
             success: function (msg) {
                 if(msg.status === 'ok')
                 {
-                    console.log('Ricevuto il token: '+msg.data)
+                    console.log('Ricevuto il token: '+msg.data);
+                    localStorage.setItem('token',msg.data)
                     alert('Success');
                 }
                 else

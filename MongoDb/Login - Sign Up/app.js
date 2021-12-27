@@ -26,11 +26,29 @@ app.use('/', express.static(path.join(__dirname, 'static')));
 
 app.use(bodyParser.json());
 
-app.post('api/change-password', (req,res,next)=>{
-    const { token } = req.body;
-    const user = jwt.verify(token, JWT_SECRET);
+app.post('/api/change-password', async (req,res,next)=>{
+    const { token, newpassword: plainTextPassword } = req.body;
 
-    console.log(user)
+    if (!plainTextPassword || typeof plainTextPassword !== 'string') {
+        return res.json({ status: 'error', error: 'Password Non valida' })
+    }
+
+    try{
+        const user = jwt.verify(token, JWT_SECRET);
+        console.log(user);
+        const _id = user.id;
+        const password = await bcrypt.hash(newpassword,10)
+        await User.updateOne({ _id },{
+            $set: {password: password}
+        })
+        res.json({status: 'ok'})
+    }
+    catch(error){
+        console.log(error)
+        res.json({ status: 'error', error: ':)'})
+    }
+
+    console.log('JWT Decoded: '+user)
     res.json({ status: 'ok'})
 })
 
