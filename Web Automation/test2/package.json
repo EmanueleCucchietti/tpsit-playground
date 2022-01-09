@@ -1,0 +1,14 @@
+{
+  "name": "test2",
+  "version": "1.0.0",
+  "description": "Test 2 - Journalism",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "EmanueleCucchietti",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "selenium-webdriver": "^4.1.0"
+  }
+}
