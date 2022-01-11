@@ -1,0 +1,16 @@
+{
+  "name": "my-writeread-mongoose",
+  "version": "1.0.0",
+  "description": "page using mongoDb with mongoose schema - write and read db",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "EmanueleCucchietti",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "express": "^4.17.2",
+    "mongoose": "^6.1.6",
+    "path": "^0.12.7"
+  }
+}
