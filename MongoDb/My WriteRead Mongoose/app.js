@@ -12,12 +12,12 @@ mongoose.connect(uriDb, {
     useUnifiedTopology: true
 });
 
-app.listen(1337, () => {
+app.listen(8080, () => {
     console.log('running');
 })
 
 app.use('/',(req,res,next)=>{
-    console.log(req.method + " : " + req.originalUrl);
+    console.log(req.method + " : " + req.originalUrl + " - " + req.socket.remoteAddress);
     next();
 })
 app.use('/',express.static(path.join(__dirname,'static')));
