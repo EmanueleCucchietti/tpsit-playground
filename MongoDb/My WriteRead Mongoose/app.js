@@ -27,3 +27,16 @@ app.get('/api/readData', async (req,res,next)=>{
     let users = await User.find();
     res.json(users)
 });
+app.post('/api/writeData', async (req,res,next) => {
+    console.log(req.body.first)
+    let newUser = new User({
+        first: req.body.first,
+        last: req.body.last,
+        age: req.body.age
+    })
+    newUser.save(function(err,data){
+        console.log(data)
+    })
+    console.log(newUser)
+    res.json("working");
+})

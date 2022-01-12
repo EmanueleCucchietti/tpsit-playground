@@ -23,7 +23,7 @@
             <div class="col-8">1
                 <div class="main justify-content-center"><br>
                     <h1 style="text-align: center;">Test Reading/Writing MongoDb</h1><br><br>
-                    <div style="text-align: center;"><button type="button" style="margin: 0 auto;"
+                    <div style="text-align: center;"><button type="button" style="margin: 0 auto;" id="update1"
                             class="btn btn-primary">Aggiorna</button></div>
                     <table class="table">
                         <thead>
@@ -37,6 +37,25 @@
                         <tbody id="tbody1">
                         </tbody>
                     </table>
+                    <br>
+                    <div style="text-align: center;"><button type="button" style="margin: 0 auto;"
+                        class="btn btn-primary" id="openModal">Aggiungi Record</button></div>
+                        <br>
+                        <form id="formAddRecord" action="" method="post">
+                            <div class="mb-3">
+                              <label class="form-label">First Name</label>
+                              <input type="email" class="form-control" autocomplete="off" name="first">
+                            </div>
+                            <div class="mb-3">
+                              <label class="form-label">Last Name</label>
+                              <input type="password" class="form-control" autocomplete="off" name="last">
+                            </div>
+                            <div class="mb-3">
+                              <label class="form-label">Age</label>
+                              <input type="number" class="form-control" autocomplete="off" name="age">
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="submit1">Submit</button>
+                          </form>
                 </div>
             </div>
             <div class="col-2"></div>

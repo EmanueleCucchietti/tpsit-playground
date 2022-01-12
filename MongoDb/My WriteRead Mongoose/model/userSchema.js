@@ -7,8 +7,9 @@ const UserSchema = new mongoose.Schema(
         age: {type: Number, required: true}
     },
     {
-        collection: 'users'
-    }
+        collection: 'users',
+        versionKey: false
+    },
 )
 
 const model = mongoose.model("UserSchema", UserSchema);
