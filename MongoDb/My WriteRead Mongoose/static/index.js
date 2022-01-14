@@ -49,6 +49,21 @@ $(function () {
                         }))
                 }
             }
+            tr.append($("<td>", {
+                append: [
+                    $("<button>", {
+                        html: "Elimina",
+                        class: "btn btn-primary",
+                        style: "float: right;",
+
+                        on: {
+                            "click": (e) => {
+                                ajaxCallDelete($(e.target).parent().siblings().eq(0).text());
+                            }
+                        }
+                    })
+                ]
+            }))
         }
     }
     function convertForm2Json() {
@@ -60,7 +75,7 @@ $(function () {
         });
         return indexed_array;
     }
-    function ajaxCallWrite(){
+    function ajaxCallWrite() {
         $.ajax({
             type: "POST",
             url: "api/writeData",
@@ -71,6 +86,7 @@ $(function () {
 
             success: function (data) {
                 console.log(data)
+                loadTable(data)
             },
 
             error: function (msg) {
@@ -78,20 +94,38 @@ $(function () {
             }
         })
     }
-    
+    function ajaxCallDelete(idItem) {
+        
+        $.ajax({
+            type: "DELETE",
+            url: "api/deleteData"+"?_id="+idItem,
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+
+            success: function (data) {
+                console.log(data)
+                loadTable(data)
+            },
+
+            error: function (msg) {
+                console.log(msg);
+            }
+        })
+    }
 
     _btnSend.on("click", function (e) {
         e.preventDefault();
         ajaxCallWrite();
     })
-    _btnUpdate.on("click",function(){
+    _btnUpdate.on("click", function () {
         ajaxCallRead();
     })
-    _btnOpenModal.on("click",function(){
+    _btnOpenModal.on("click", function () {
         modalOpened = !modalOpened;
-        if(modalOpened)
+        if (modalOpened)
             $("#formAddRecord").show();
         else
             $("#formAddRecord").hide();
     })
+
 })
