@@ -86,7 +86,12 @@ $(function () {
 
             success: function (data) {
                 console.log(data)
-                loadTable(data)
+                console.log(data.slice(0, 4))
+                if (data.slice(0, 4) == "wait")
+                    alert("Wait " + (data.slice(4) / 1000) + " seconds pls");
+                else {
+                    ajaxCallRead();
+                }
             },
 
             error: function (msg) {
@@ -95,10 +100,10 @@ $(function () {
         })
     }
     function ajaxCallDelete(idItem) {
-        
+
         $.ajax({
             type: "DELETE",
-            url: "api/deleteData"+"?_id="+idItem,
+            url: "api/deleteData" + "?_id=" + idItem,
             contentType: "application/json; charset=utf-8",
             dataType: "json",
 
@@ -112,7 +117,6 @@ $(function () {
             }
         })
     }
-
     _btnSend.on("click", function (e) {
         e.preventDefault();
         ajaxCallWrite();
