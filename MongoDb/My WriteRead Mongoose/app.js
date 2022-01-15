@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const uriDb = require("./secret/uriDb.js")
 
 const User = require("./model/userSchema");
+const IpSchema = require("./model/ipSchema")
 
 const path = require('path');
 
@@ -28,17 +29,34 @@ app.get('/api/readData', async (req, res, next) => {
     res.json(users)
 });
 app.post('/api/writeData', async (req, res, next) => {
+    let ipClient = req.socket.remoteAddress;
+    IpSchema.findOne({ip: ipClient}, function(err, result) {
+        if (err) {
+            console.log(err)
+            res.send(err);
+        } else {
+            if(result == null){
+                //writable
+                let newUser = new User({
+                    first: req.body.first,
+                    last: req.body.last,
+                    age: req.body.age
+                })
+                newUser.save(function (err, data) {
+                    console.log(data)
+                })
+                res.json(await User.find());
+            }
+            else{
+                //already wrote
+            }
+        }
+      });
+    console.log(new Date())
+    /*
     console.log(req.body.first)
-    let newUser = new User({
-        first: req.body.first,
-        last: req.body.last,
-        age: req.body.age
-    })
-    newUser.save(function (err, data) {
-        console.log(data)
-    })
+    
     console.log(newUser)
-    res.json(await User.find());
 })
 app.delete('/api/deleteData', async (req, res, next) => {
     console.log(req.query._id)
