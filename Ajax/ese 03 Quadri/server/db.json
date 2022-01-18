@@ -43,7 +43,7 @@
       "artist": 1,
       "title": "guernica",
       "img": "guernica.jpg",
-      "nLike": 13
+      "nLike": 18
     },
     {
       "id": 2,
@@ -64,7 +64,7 @@
       "artist": 2,
       "title": "la fattoria",
       "img": "la fattoria.jpg",
-      "nLike": 16
+      "nLike": 21
     },
     {
       "id": 5,
@@ -85,7 +85,7 @@
       "artist": 3,
       "title": "i giocatori di carte",
       "img": "i giocatori di carte.jpg",
-      "nLike": 19
+      "nLike": 22
     },
     {
       "id": 8,
@@ -106,7 +106,7 @@
       "artist": 4,
       "title": "il giardino dell'artista",
       "img": "il giardino dell'artista.jpg",
-      "nLike": 22
+      "nLike": 18
     },
     {
       "id": 11,
@@ -127,7 +127,7 @@
       "artist": 5,
       "title": "sulla terrazza",
       "img": "sulla terrazza.jpg",
-      "nLike": 25
+      "nLike": 23
     },
     {
       "id": 14,
@@ -148,7 +148,7 @@
       "artist": 6,
       "title": "notte stellata",
       "img": "notte stellata.jpg",
-      "nLike": 28
+      "nLike": 31
     },
     {
       "id": 17,
