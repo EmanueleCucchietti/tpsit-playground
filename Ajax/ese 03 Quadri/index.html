@@ -1,0 +1,49 @@
+<!doctype  html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8"/> 
+	    <title>Galleria d'Arte</title>
+		<link rel="stylesheet" href="index.css" />
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="libreria.js"></script>  
+		<script src="index.js"></script>
+	</head>
+	
+	<body>
+		<div class="wrapper">
+		
+			<h1 align="center">Galleria d'Arte</h1>
+			
+			<div class="header">  
+				<!-- <label> <input type='radio'> artistname </label> -->
+			</div>
+			
+			<div class="content">
+				<div> 
+					<button> Indietro </button> 
+				</div>			
+				<div class="info"> </div>
+				<div class="img"> </div>
+				<div>
+					<button> Avanti </button> 
+				</div>
+			</div>
+		
+		</div>
+
+        <div class="wrapper">
+			<h1 align="center">Inserisci un nuovo quadro di </h1>
+			<div>
+				<label> Titolo: </label>
+				<input type="text" id="titolo">
+				<br><br>
+				<label> Scegli file: </label>
+				<input type="file" id="immagine">
+			</div>
+			<div style="margin-top: 10px" align="center">
+				<button id="btnSalva">Salva</button>
+				<button id="btnAnnulla">Annulla</button>
+			</div>
+        </div>
+	</body>
+</html>

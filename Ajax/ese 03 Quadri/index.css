@@ -1,0 +1,62 @@
+.wrapper{
+	width:800px;
+	margin: 10px auto;
+	border:1px solid #ccc;	
+	user-select:none;
+}
+
+
+.header{		
+	width:750px;	
+	margin:15px auto;
+	text-align:center;
+}
+.header input[type=radio]{
+	margin-left:20px;
+}
+
+.content{
+	width:750px;	
+	margin:15px auto;
+	padding:20px 0;	
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+	align-items:center;
+}
+.content div {
+   padding:6px;
+}
+.content .info {
+   padding-left:40px;
+   padding-right:40px;
+}
+.content button{
+   font-size:16pt;
+}
+
+/* immagine like */
+.like{
+   width:25px;
+   height:25px;
+   vertical-align:middle;
+   margin-left:15px;
+}
+
+/* ******************** wrapper inserimento nuovo quadro ******************** */
+.wrapper:nth-of-type(2){
+	padding: 0 20px 20px 20px;
+	/* fa in modo che il padding non venga sommato a width */
+	box-sizing: border-box;
+}
+
+.wrapper:nth-of-type(2) label{
+	display:inline-block; 
+	width:90px;
+	text-align:right;
+}
+
+.wrapper:nth-of-type(2) button{
+	display:inline-block; 
+	width:80px;
+}
