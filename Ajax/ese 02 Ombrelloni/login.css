@@ -1,0 +1,95 @@
+*{	padding:0;	margin:0; }
+
+h1{
+	text-align:center;
+	margin:40px;
+}
+
+/* *********************************************************** **
+ 
+ Il file ha dimensione 256 (h) x 240 (v)
+   In verticale  ci sono 15 icone per cui ciascuna ha altezza 16px
+   In horizontal ci sono 16 icone per cui ciascuna ha larghez 16px
+
+** *********************************************************** */
+
+
+#login{
+	width:350px;
+	padding:30px;
+	margin:10px auto;
+	background-color:white;
+	border-radius:10px;
+	border:1px solid #ddd;
+}
+
+#login div div, #login div input{
+	display:inline-block;
+}
+
+#login > div{
+	border:1px solid #555;
+	width:80%;
+	margin-left:10%;
+	margin-bottom:15px;
+	border-radius:6px;	
+	padding:6px;
+}
+
+#login div div:first-of-type{
+	background-image:url(img/icons.png);
+	width:16px;
+	height:16px;
+	vertical-align:middle;
+}
+
+#login div input{
+	border:none;
+	margin-left:6px;
+	vertical-align:middle;
+}
+
+/* ************************************************************* */
+
+#login > div:nth-of-type(1) div{
+	/* 9*16=144 6*16=96 */
+	background-position: -144px -96px;
+}
+
+#login > div:nth-of-type(2) div{
+	/* 12*16=192 6*16=96 */
+	background-position: -192px -96px;
+}
+
+#login > div:nth-of-type(3) div:nth-of-type(1){
+	/* 4*16=64 9*16=144 */
+	background-position: -64px -144px;
+}
+
+
+/* ************************************************************* */
+
+
+/* Pulsante */
+
+#login > div:nth-of-type(3){
+	background-color:#555;
+}
+#login > div:nth-of-type(3) div:nth-of-type(2){
+	color:white;
+	text-align:center;
+	width:80%;	
+}
+
+
+/* Effetti */
+
+#login div input:focus{
+	outline: none;
+}
+#login div:nth-of-type(3):hover{
+	cursor:pointer;
+}
+#login div:nth-of-type(3):hover div:nth-of-type(2){
+	text-decoration:underline
+}
