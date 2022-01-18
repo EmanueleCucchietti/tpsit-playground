@@ -52,6 +52,7 @@ app.post('/api/writeData', async (req, res, next) => {
             else {
                 let oldDate = result.date;
                 let actualDate = new Date();
+                console.log(((new Date).toString()));
                 let timePassed = actualDate.getTime() - oldDate.getTime();
                 if (timePassed > timeAvailableForEachWrite) {
                     writeUser(req.body.first, req.body.last, req.body.age, ipClient);
