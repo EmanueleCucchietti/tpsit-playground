@@ -1,0 +1,112 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+#wrapper {
+	width: 900px;	
+	text-align: center;
+	margin:15px auto;
+	user-select:none;
+}
+
+#wrapper h1{padding-bottom:10px;}
+#wrapper h3{padding-bottom:12px;}
+#wrapper > p{padding-bottom:16px;}
+
+/* *********************** divSpettacoli ************************ */
+
+#divSpettacoli{
+	width:500px;
+	margin:0 auto;
+}
+
+#divSpettacoli > div{
+	margin:10px auto;
+	overflow:auto;
+}
+
+#divSpettacoli .img{
+	float:left;
+	width:200px;
+	text-align:center;
+}
+
+#divSpettacoli .img img{
+	max-height:110px;
+}
+
+#divSpettacoli .details{
+	width:290px;
+    float:right;	
+}
+
+#divSpettacoli .details *{
+   margin:3px;	
+}
+#divSpettacoli .details p:nth-of-type(1){
+	font-weight:bold;
+}
+#divSpettacoli .details p:nth-of-type(2){
+	font-size:10pt;
+}
+#divSpettacoli .details p:nth-of-type(3){
+	font-size:11pt;
+}
+#divSpettacoli .details p:nth-of-type(4){
+	font-size:11pt;
+}
+#divSpettacoli .details button{
+	font-size:9pt;
+	border-radius:3px;
+	padding:3px;
+	cursor:pointer;
+}
+#divSpettacoli .details button:hover{
+	transform:scale(1.07);
+}
+#divSpettacoli .details button:disabled{
+	cursor:default;
+}
+#divSpettacoli .details button:disabled:hover{
+	transform:none;
+}
+
+/* ************************ divMappa ************************** */
+
+#divMappa > div:nth-of-type(1) {
+	width:800px;
+	height:552px;
+	margin:5px auto;
+	background-image:url("img/pianta teatro.jpg");
+	border-radius:10px;
+	position:relative;
+}
+
+
+#divMappa .poltrona{
+	position:absolute;
+	width:16.5px;
+	height:13.5px;
+	padding:0;
+	margin:2px 0px;
+	/* larghezza effettiva  16.5 */
+	/* altezza effettiva 13.5 + 2 + 2 = 17.5 */	 
+}
+
+#divMappa button{
+	width:100px;
+	height:35px;
+	margin:8px auto;
+	font-size:15pt;
+	font-weight:bold;
+	box-shadow:4px 4px 2px #BBB;
+	border-radius:8px;
+	cursor:pointer;
+}
+
+#divMappa button:disabled{
+	cursor:default;
+}
+
+
