@@ -39,7 +39,10 @@ $(function () {
         request.fail(errore);
         request.done(function (data) {
             index = 0;
+            _btnNext.prop("disabled", false)
+            _btnPrev.prop("disabled", false)
             quadri = data;
+            console.log(index)
             visualizzaQuadro();
         })
 
@@ -65,10 +68,12 @@ $(function () {
         })
     }
     function next() {
+        console.log(index)
         index++;
         visualizzaQuadro()
     }
     function prev() {
+        console.log(index)
         index--;
         visualizzaQuadro()
     }
@@ -82,7 +87,7 @@ $(function () {
         if (index == quadri.length - 1)
             _btnNext.prop("disabled", true);
         else
-            _btnPrev.prop("disabled", false)
+            _btnNext.prop("disabled", false)
 
         _info.empty();
 
@@ -95,18 +100,32 @@ $(function () {
         img.on("click", incrementaLike)
 
         $("<div>").html("Like = <b>" + quadri[index].nLike + "</b>").append(img).appendTo(_info)
-        _img.css("background-image", "url('img/" + quadri[index].img + "')")
+        if (!quadri[index].img.startsWith("data:image/"))
+            _img.css("background-image", "url('img/" + quadri[index].img + "')")
+        else
+            _img.css("background-image", "url('" + quadri[index].img + "')")
         _img.css("width", "200px").css("height", "150px").css("background-size", "cover")
     }
 
     _btnNext.on("click", next)
     _btnPrev.on("click", prev)
     $("#btnSalva").on("click", function () {
-        let file = $("#txtFile").prop("files")[0];
+        let file = $("#immagine").prop("files")[0];
         let reader = new FileReader();
         reader.readAsDataURL(file);
         reader.onloadend = function () {
-            _img.prop("src", reader.result)
+            let quadro = {
+                "artist":  _header.find("input[type=radio]:checked").prop("artista").id,
+                "title": $("#titolo").val(),
+                "img": reader.result,
+                "nLike": 0
+            }
+            let request = inviaRichiesta("POST", URL + '/quadri', quadro);
+            request.fail(errore);
+            request.done(function(){
+                console.log("Quadro salvato correttamente");
+                caricaQuadri()
+            })
         }
     })
 })
