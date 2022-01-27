@@ -1,0 +1,38 @@
+*{
+	padding:0;
+	margin:0;
+}
+
+h1{
+	text-align:center;
+	font-weight:bold;
+	margin:20px;
+}
+
+h3{
+	text-align:center;
+	margin-top: 10px;
+	margin-bottom:30px;
+}
+
+/* *********************************************** */
+#PAGE1 > div:nth-of-type(2) > div:nth-of-type(2) {
+	text-align:center;
+	color: red;
+	padding:12px;
+}
+
+#btnInvia, #btnConferma, #btnChiudi{
+	margin-top:15px; 
+}
+
+/* *********************************************** */
+#PAGE2 span:nth-of-type(even){
+	font-weight:bold;
+}
+
+
+#PAGE2_DATA > div{
+	float:right;
+	margin-top:15px;
+}

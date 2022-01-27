@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Regali</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="index.css" />
+
+	<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<script src="libreria.js"></script>
+	<script src="index.js"></script>
+</head>
+
+<body>
+	<h1>C'è un Regalo per Te</h1>
+	<div class="container">
+		<div class='row' id="PAGE1">
+			<div class='col-md-2'></div>
+			<div class='col-sm-12 col-md-8'>
+				<h3> Abiti in una di queste città? </h3>
+				<div class='row'>
+					<div class='col-sm-5'> </div>
+					<div class='col-sm-4' id="PAGE1_DATA">
+						<!--  struttura radio buttons -->
+						<div class="form-check">
+							<input type="radio" class="form-check-input" id="opt-1">
+							<label class="form-check-label" for="opt-1" value="tes">
+
+							</label>
+						</div>
+						<button class="btn btn-light" id="btnInvia"> invia </button>
+						<!-- fine -->
+					</div>
+					<div class='col-sm-3'> </div>
+				</div>
+				<div>
+					<span> </span>
+				</div>
+			</div>
+			<div class=' col-md-2'></div>
+		</div>
+
+
+		<div class='row' id="PAGE2">
+			<div class='col-md-2'> </div>
+			<div class='col-sm-12 col-md-8'>
+				<h3> Complimenti hai vinto questo bellissimo regalo: </h3>
+				<div id="PAGE2_DATA">
+					<div> <img src="img/pc.jpg" width=220> </div>
+					<p> <span> nome: </span> <span> </span></p>
+					<p> <span> descrizione: </span> <span> </span></p>
+					<p> Puoi ritirare il regalo presso:</p>
+					<p> <span> negozio: </span> <span> </span></p>
+					<p> <span> indirizzo: </span> <span> </span></p>
+					<button class="btn btn-light" id="btnConferma"> conferma </button>
+				</div>
+			</div>
+			<div class='col-md-2'> </div>
+		</div>
+
+
+		<div class='row' id="PAGE3">
+			<div class='col-sm-3'> </div>
+			<div class='col-sm-6'>
+				<h3> Stampa il seguente QR code e consegnalo al negozio: </h3>
+				<div id="PAGE3_DATA">
+					<div> </div>
+					<button class="btn btn-light" id="btnChiudi"> chiudi </button>
+				</div>
+			</div>
+			<div class='col-sm-3'> </div>
+		</div>
+
+	</div>
+</body>
+
+</html>

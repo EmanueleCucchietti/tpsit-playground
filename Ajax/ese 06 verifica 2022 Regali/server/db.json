@@ -1,0 +1,298 @@
+{
+  "citta": [
+    {
+      "id": 1,
+      "nome": "Milano"
+    },
+    {
+      "id": 2,
+      "nome": "Torino"
+    },
+    {
+      "id": 4,
+      "nome": "Cuneo"
+    },
+    {
+      "id": 11,
+      "nome": "Mantova"
+    },
+    {
+      "id": 12,
+      "nome": "Novara"
+    }
+  ],
+  "negozi": [
+    {
+      "id": 1,
+      "codCitta": 1,
+      "nome": "Omnia Sport",
+      "indirizzo": "Via dei Mille, 82"
+    },
+    {
+      "id": 2,
+      "codCitta": 1,
+      "nome": "Uniero",
+      "indirizzo": "Via Roma, 40"
+    },
+    {
+      "id": 3,
+      "codCitta": 2,
+      "nome": "Patty Sport",
+      "indirizzo": "Via San Michele, 68"
+    },
+    {
+      "id": 4,
+      "codCitta": 2,
+      "nome": "Euronics",
+      "indirizzo": "Via Torino, 124"
+    },
+    {
+      "id": 5,
+      "codCitta": 4,
+      "nome": "Mattiauda Automobili",
+      "indirizzo": "Via Nizza, 84"
+    },
+    {
+      "id": 6,
+      "codCitta": 4,
+      "nome": "Rossi computer",
+      "indirizzo": "Via Roma, 140"
+    },
+    {
+      "id": 7,
+      "codCitta": 11,
+      "nome": "Il gioiello",
+      "indirizzo": "Via Marmora, 200"
+    },
+    {
+      "id": 8,
+      "codCitta": 11,
+      "nome": "Eataly",
+      "indirizzo": "Via Piani Romani, 90"
+    },
+    {
+      "id": 9,
+      "codCitta": 12,
+      "nome": "Il trisabolo",
+      "indirizzo": "Viale Malpensa, 90"
+    },
+    {
+      "id": 10,
+      "codCitta": 12,
+      "nome": "Prisma",
+      "indirizzo": "Via della Spiga, 13"
+    }
+  ],
+  "regali": [
+    {
+      "id": 1,
+      "codNegozio": 1,
+      "nome": "racchetta da tennis",
+      "descrizione": "racchetta da tennis rossignol",
+      "qta": 100
+    },
+    {
+      "id": 2,
+      "codNegozio": 1,
+      "nome": "T-shirt",
+      "descrizione": "colore blu taglia S/M/L",
+      "qta": 99
+    },
+    {
+      "id": 3,
+      "codNegozio": 1,
+      "nome": "guanti da sci",
+      "descrizione": "modello reusch svariati colori",
+      "qta": 98
+    },
+    {
+      "id": 4,
+      "codNegozio": 2,
+      "nome": "cavo hdmi",
+      "descrizione": "lunghezza 10m",
+      "qta": 100
+    },
+    {
+      "id": 5,
+      "codNegozio": 2,
+      "nome": "chiavetta USB",
+      "descrizione": "capienza 64GB",
+      "qta": 100
+    },
+    {
+      "id": 6,
+      "codNegozio": 2,
+      "nome": "radiosveglia",
+      "descrizione": "cubo sony bianco",
+      "qta": 100
+    },
+    {
+      "id": 7,
+      "codNegozio": 3,
+      "nome": "scarpe adidas",
+      "descrizione": "bianche e blu taglie dal 38 al 44",
+      "qta": 100
+    },
+    {
+      "id": 8,
+      "codNegozio": 3,
+      "nome": "cuffia",
+      "descrizione": "cuffia bianca e blu per piscina",
+      "qta": 99
+    },
+    {
+      "id": 9,
+      "codNegozio": 3,
+      "nome": "zaino",
+      "descrizione": "zaino per montagna capienza 20L",
+      "qta": 100
+    },
+    {
+      "id": 10,
+      "codNegozio": 4,
+      "nome": "forno microonde",
+      "descrizione": "potenza 300W - 800W",
+      "qta": 100
+    },
+    {
+      "id": 11,
+      "codNegozio": 4,
+      "nome": "frigorifero",
+      "descrizione": "rex con cella freezer",
+      "qta": 100
+    },
+    {
+      "id": 12,
+      "codNegozio": 4,
+      "nome": "scanner",
+      "descrizione": "Canon max 1200 ppi",
+      "qta": 100
+    },
+    {
+      "id": 13,
+      "codNegozio": 5,
+      "nome": "500",
+      "descrizione": "Fiat 500 rossa",
+      "qta": 100
+    },
+    {
+      "id": 14,
+      "codNegozio": 5,
+      "nome": "600",
+      "descrizione": "Fiat 600 gialla",
+      "qta": 100
+    },
+    {
+      "id": 15,
+      "codNegozio": 5,
+      "nome": "panda",
+      "descrizione": "Fiat Panda blu 4x4",
+      "qta": 98
+    },
+    {
+      "id": 16,
+      "codNegozio": 6,
+      "nome": "notebook",
+      "descrizione": "Acer i5 RAM 8GB",
+      "qta": 99
+    },
+    {
+      "id": 17,
+      "codNegozio": 6,
+      "nome": "cd player",
+      "descrizione": "toshiba colori rosso/blu/nero",
+      "qta": 100
+    },
+    {
+      "id": 18,
+      "codNegozio": 6,
+      "nome": "norton antivirus",
+      "descrizione": "abbonamento antivirus 24 mesi",
+      "qta": 99
+    },
+    {
+      "id": 19,
+      "codNegozio": 7,
+      "nome": "braccialetto",
+      "descrizione": "braccialetto maschile cuoio nero",
+      "qta": 100
+    },
+    {
+      "id": 20,
+      "codNegozio": 7,
+      "nome": "girocollo",
+      "descrizione": "girocollo femminile in argento",
+      "qta": 100
+    },
+    {
+      "id": 21,
+      "codNegozio": 7,
+      "nome": "orologio",
+      "descrizione": "Tissot ricarica automatica",
+      "qta": 100
+    },
+    {
+      "id": 22,
+      "codNegozio": 8,
+      "nome": "jambom hiberico",
+      "descrizione": "coscia di prosciutto crudo da 3kg",
+      "qta": 98
+    },
+    {
+      "id": 23,
+      "codNegozio": 8,
+      "nome": "selezione vini",
+      "descrizione": "cassetta vini bianchi nord italia",
+      "qta": 99
+    },
+    {
+      "id": 24,
+      "codNegozio": 8,
+      "nome": "selezione spumanti",
+      "descrizione": "migliori spumanti e prosecchi veneti",
+      "qta": 100
+    },
+    {
+      "id": 25,
+      "codNegozio": 9,
+      "nome": "asciugamano",
+      "descrizione": "asciugamano da spiagggia blu",
+      "qta": 99
+    },
+    {
+      "id": 26,
+      "codNegozio": 9,
+      "nome": "tavolino",
+      "descrizione": "tavolino da ufficio bianco",
+      "qta": 99
+    },
+    {
+      "id": 27,
+      "codNegozio": 9,
+      "nome": "tappeto persiano",
+      "descrizione": "disponibile in svariati colori e modelli",
+      "qta": 98
+    },
+    {
+      "id": 28,
+      "codNegozio": 10,
+      "nome": "occhiali da sole",
+      "descrizione": "modello Prada colore rosso",
+      "qta": 99
+    },
+    {
+      "id": 29,
+      "codNegozio": 10,
+      "nome": "valigia",
+      "descrizione": "trolley nero",
+      "qta": 100
+    },
+    {
+      "id": 30,
+      "codNegozio": 10,
+      "nome": "beauty",
+      "descrizione": "beautycase femminile rosa",
+      "qta": 98
+    }
+  ]
+}
