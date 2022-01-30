@@ -1,0 +1,149 @@
+:root{
+    /* Background of Header */
+    --headerBackroundColor: #2c2e31;
+    --textWhiteColor: #fff;
+}
+/* SELECTION GREEN */
+::-moz-selection { /* Code for Firefox */
+    color: #FFFFFF;
+    background: #83BA43;
+  }
+  
+  ::selection {
+    color: #FFFFFF;
+    background: #83BA43;
+  }
+/* SELECTION GREEN */
+
+#header{
+    background-color: var(--headerBackroundColor);
+    width: 100%;
+    height: 500px;
+}
+#rowHeader h1,#rowHeader p{
+    color: var(--textWhiteColor);
+    font-family: Ubuntu,sans-serif !important;
+}
+#rowHeader h1{
+    font-size: 48px;
+    font-weight: 300 !important;
+}
+#rowHeader p{
+    font-size: 18px;
+}
+#followUsA{
+    font-size: 14px;
+    color: hsla(0,0%,100%,0.5);
+    text-decoration: none;
+}
+#wrapper{
+    margin: auto;
+}
+#topWrapper{
+    margin: auto;
+}
+#mainCard p{
+    margin: 0;
+}
+#mainCard{
+    margin: auto;
+    max-width: 730px;
+    
+    position: relative;
+    padding: 20px 0;
+    width: 100%;
+    background: #fff;
+    border-radius: 3px;
+    border-left: none !important;
+    border-right: none !important;
+    overflow: hidden;
+    text-align: center;
+    z-index: 5;
+}
+#imgUser{
+    position: relative;
+    background: #fff;
+    padding: 5px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,.25);
+}
+#mainCard:after{
+    content:"";
+    display:block;
+    position:absolute;
+    width:100%;
+    height:130px;
+    top:0;
+    background:#f9f9f9;
+    border-bottom:1px solid rgba(0,0,0,.15);
+    z-index:-1;
+}
+#subTitle{
+    color: #999;
+    font-size: 18px;
+}   
+#mainTitle{
+    color: #2c2e31;
+    font-size: 38px;
+    margin: 5px;
+}
+#selectImgContainer{
+    border: none;
+}
+#selectImgContainer > li{
+    border: none;
+    cursor: pointer;
+    display: block;
+    width: 40px;
+    height: 48px;
+    float: left;
+    margin: 20px;
+    background-image: url("../img/card_icons.png");
+    background-size: 378px;
+    background-position-y: -48px;
+    transition: all .25s ease-out;
+}
+#sliderResults > .slider-selection{
+    background-color: #83BA43 !important;
+    background-image: linear-gradient(to bottom, #83BA43, #83BA43);
+}
+#filterCard{
+    margin: auto;
+    max-width: 730px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px #ccc;
+    position: relative;
+    padding: 20px 0;
+    width: 100%;
+    background: #fff;
+    border-radius: 0;
+    overflow: hidden;
+    text-align: center;
+    z-index: 5;
+}
+#ex1Slider{
+    width: 100%;
+}
+.form-check-input:checked{
+    background-color: #83BA43 !important;
+    border-color: #83BA43 !important;
+}
+
+/* TOOLTIP NEW USER SET*/
+
+#btnNewUserSet{
+    position: relative;
+    margin: auto;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    width: 50%;
+    visibility: hidden;
+    background-color: rgba(0,0,0,.75);
+}
+@media screen and (max-width: 550px){
+    #selectImgContainer > li{
+        margin: 0 5px !important;
+    }
+}

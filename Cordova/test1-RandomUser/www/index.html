@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'; img-src * data: 'unsafe-inline'; connect-src * 'unsafe-inline'; frame-src *;">
+    <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready file:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">  
+    <title>Random User Generator</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+
+    <!-- SLIDER -->
+    <script src="js/bootstrap-slider.js"></script>
+    <link rel="stylesheet" href="css/bootstrap-slider.css">
+
+</head>
+
+<body>
+    <header id="header">
+        <br><br><br><br>
+        <div class="row" id="rowHeader" style="width: 100%;">
+            <div class="col-lg-3 col-md-0 col-0 col-sm-0"></div>
+            <div class="col-lg-6 col-md-12 col-12 col-sm-12 justify-content-center" id="headerCardMain">
+                <h1 class="text-center">RANDOM USER GENERATOR</h1>
+                <p class="text-center">A free, <a id="openSource" style="color: #08a;"
+                        href="https://github.com/RandomAPI/Randomuser.me-Node">open-source</a> API
+                    for
+                    generating random user data. Like Lorem Ipsum, but for people. </p>
+                <p class="text-center" style="margin: 0;"><a href="https://twitter.com/randomapi" class="twitter"
+                        id="followUsA"><img style="width: 25px; height: 25px;" src="img/twitter.png">Follow us
+                        @randomapi</a></p>
+            </div>
+            <div class="col-lg-3 col-md-0 col-0 col-sm-0"></div>
+        </div>
+        <br><br><br>
+        <wrappper id="wrapper" style="width: 100%;">
+            <div class="row" style="width: 100%;">
+                <div class="col-lg-3 col-md-0 col-0 col-sm-0"></div>
+                <div class="col-lg-6 col-md-12 col-12 col-sm-12 justify-content-center">
+                    <div class="row">
+
+                        <div class="col-1" style="font-size: 50pt; color: #fff;">
+                            <br><br>
+                            <img src="img/leftArrow.png" style="width: 100%;" id="leftArrow">
+                        </div>
+                        <div class="col-10">
+                            <div class="card" style="width: 100%" id="mainCard">
+                                <div id="topWrapper">
+                                    <img id="imgUser">
+                                    <button id="btnNewUserSet" type="button" class="btn btn-secondary">
+                                        New
+                                    </button>
+                                </div>
+                                <p id="subTitle">Hi, My name is</p>
+                                <p id="mainTitle">...</p>
+                                <ul id="selectImgContainer" class="list-group list-group-horizontal"
+                                    style="margin: auto;">
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-1" style="font-size: 50pt; color: #fff;">
+                            <br><br>
+                            <img src="img/rightArrow.png" style="width: 100%;" id="rightArrow">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-0 col-0 col-sm-0"></div>
+            </div>
+        </wrappper>
+        <br>
+        <filterWrapper id="filterWrapper" style="width: 100%;">
+            <div class="row" style="width: 100%;">
+                <div class="col-lg-3 col-md-0 col-0 col-sm-0"></div>
+                <div class="col-lg-6 col-md-12 col-12 col-sm-12 justify-content-center">
+                    <div class="card" style="width: 100%" id="filterCard">
+                        <div class="row" style="height: 5vh;"></div>
+
+                        <h4 style="text-align: left; margin-left: 10%;">Numero di Utenti: </h4>
+                        <div class="row justify-content-center">
+                            <div class="col-8">
+                                <input id="sliderResults" data-slider-id='ex1Slider' type="text" data-slider-min="1"
+                                    data-slider-max="20" data-slider-step="1" data-slider-value="14"
+                                    aria-valuetext="prova" />
+                            </div>
+                        </div>
+                        <h5 style="text-align: left; margin-left: 10%; margin-top: 5%;">Nazionalità:</h5>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="natAU" autocomplete="off">
+                                    <label class="form-check-label">Australia</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="natUS" autocomplete="off">
+                                    <label class="form-check-label">Stati Uniti</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="natCA" autocomplete="off">
+                                    <label class="form-check-label">Canada</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="natDK" autocomplete="off">
+                                    <label class="form-check-label">Danimarca</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="everyNat" autocomplete="off checked>
+                                    <label class=" form-check-label">Qualsiasi</label>
+                                </div>
+                            </div>
+                        </div>
+                        <h5 style="text-align: left; margin-left: 10%; margin-top: 5%;">Genere:</h5>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="rdBtnMale" value="1" autocomplete="off">
+                                    <label class="form-check-label" for="inlineRadio1">Maschile</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="rdBtnFemale" value="2" autocomplete="off">
+                                    <label class="form-check-label" for="inlineRadio2">Femminile</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="rdBtnAll"
+                                        value="3" autocomplete="off checked>
+                                    <label class=" form-check-label" for="inlineRadio2">Entrambi</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-0 col-0 col-sm-0"></div>
+            </div>
+        </filterWrapper>
+    </header>
+</body>
+
+</html>
