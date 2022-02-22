@@ -5,3 +5,6 @@
 #Project Test1 - Cordova
 /Cordova/test1-RandomUser/node_modules
 /Cordova/test1-RandomUser/platforms
+
+#Geolocation
+/Geolocation/Es 01 mappe statiche/environment.js
