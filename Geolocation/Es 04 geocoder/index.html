@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html lang="it">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="content-type" content="text/html" />
+    <title> geolocation 4 </title>
+	
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="environment.js"> </script>
+	<script src="index.js"> </script>
+
+	<style type="text/css">
+		h1{
+			text-align:center;
+			font-size:25pt;
+		}
+		
+		#wrapper{
+			width:800px;
+			height:600px;
+			margin:10px auto;		
+		}
+		
+		#buttons{
+			margin:25px auto;
+			text-align:center;
+		}
+		
+		input[type=text] { 
+			width:280px; 
+			height:22px;
+			vertical-align:middle;
+		}
+		
+		#infoWindow { padding:0; text-align:left; }
+		#infoWindow p { padding:0; margin:0}
+		#infoWindow p:last-of-type {margin-bottom:10px }
+		#infoWindow p span { font-weight:bold}
+		
+	</style>
+</head>
+
+
+<!-- ----------------------------  BODY  ----------------------------- -->
+
+<body>
+	<h1> Geocoder </h1>
+	<div id="buttons">
+		<input type="text" id="txtIndirizzo" value="Via San Michele 68, Fossano">
+		<input type="button" id="btnVisualizza" value="Visualizza">
+	</div>
+    <div id="wrapper">  </div>
+</body>
+</html>
