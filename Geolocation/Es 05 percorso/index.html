@@ -1,0 +1,68 @@
+<!doctype html>
+
+<html lang="it">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="content-type" content="text/html" />
+    <title> geolocation 5 </title>
+	
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="environment.js"> </script>
+	<script src="index.js"> </script>
+
+	<style type="text/css">
+		h1{
+			text-align:center;
+			font-size:25pt;
+		}
+		
+		#header{
+			width:1200px;
+			margin:20px auto;
+			text-align:center;
+		}
+
+		#wrapper{
+			width:1200px;
+			margin:10px auto;	
+			overflow:auto;			 
+		}
+		
+		#wrapper .map{
+			width:800px;
+			height:600px;
+			margin:10px;	
+			display:inline-block;
+		}
+		
+		#wrapper .panel{
+			width:340px;
+			margin:10px;	
+			float:right;			
+		}
+		
+		#wrapper .msg{
+			width:800px;
+			margin:10px;
+			font-size:16pt;			
+			display:inline-block;
+		}		
+	</style>
+</head>
+
+
+<!-- ----------------------------  BODY  ----------------------------- -->
+<body>
+    <h1> Visualizza Percorso </h1>
+	<div id="header">
+		<label> partenza <input type="text" value="cuneo"> </label> &nbsp;&nbsp;
+		<label> arrivo <input type="text" value="torino"> </label>
+		<input type="button" value="visualizza percorso">
+	</div>
+	<div id="wrapper">
+		<div class="map">   </div> 	
+		<div class="panel"> </div> 			
+		<div class="msg">   </div>
+	</div>	
+</body>
+</html>
