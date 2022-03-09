@@ -1,0 +1,12 @@
+#mappa{
+  border: 1px solid black;
+  margin: 20px auto;
+  width: 600px;
+  height: 600px;
+}
+
+#citta{
+  margin: 10px auto;
+  width: 100px;
+  height: 30px;
+}

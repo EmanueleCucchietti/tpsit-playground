@@ -1,0 +1,166 @@
+{
+    "citta": [
+        {
+            "id": 1,
+            "nome": "Savigliano",
+            "geocode" : "12038 Savigliano CN"
+        },
+        {
+            "id": 2,
+            "nome": "Bra",
+            "geocode" : "12042 Bra CN"
+        },
+        {
+            "id": 3,
+            "nome": "Genola",
+            "geocode" : "12040 Genola CN"
+        },
+        {
+            "id": 4,
+            "nome": "Fossano",
+            "geocode" : "12045 Fossano CN"
+        }
+    ],
+    "ristoranti": [
+        {
+            "id": 1,
+            "nome": "L'Ostu 'D Na Volta",
+            "citta": "Savigliano",
+            "indirizzo": " Via Muratori, 18, 12038 Savigliano",
+            "desc": ""
+        },
+        {
+            "id": 2,
+            "nome": "Officina del Gusto",
+            "citta": "Savigliano",
+            "indirizzo": " Corso Roma, 55, 12038 Savigliano",
+            "desc": ""
+        },
+        {
+            "id": 3,
+            "nome": "Osteria dell’Orsa",
+            "citta": "Savigliano",
+            "indirizzo": " Piazza Battisti, 5, 12038 Savigliano",
+            "desc": ""
+        },
+        {
+            "id": 4,
+            "nome": "Trattoria pizzeria Costa d'Amalfi",
+            "citta": "Savigliano",
+            "indirizzo": " Via Saluzzo, 56, 12038 Savigliano",
+            "desc": ""
+        },
+        {
+            "id": 5,
+            "nome": "Ristorante Pizzeria Da Vincenzo",
+            "citta": "Savigliano",
+            "indirizzo": " Via Allione, 14, 12038 Savigliano",
+            "desc": ""
+        },
+        {
+            "id": 6,
+            "nome": "La Patateria",
+            "citta": "Bra",
+            "indirizzo": " Via Mendicità Istruita, 7, 12042 Bra",
+            "desc": ""
+        },
+        {
+            "id": 7,
+            "nome": "Osteria del Boccondivino",
+            "citta": "Bra",
+            "indirizzo": " Via Mendicità Istruita, 14, 12042 Bra",
+            "desc": ""
+        },
+        {
+            "id": 8,
+            "nome": "480GRADI",
+            "citta": "Bra",
+            "indirizzo": " Piazza XX Settembre, 32/A, 12042 Bra",
+            "desc": ""
+        },
+        {
+            "id": 9,
+            "nome": "Pomodoro & Basilico",
+            "citta": "Bra",
+            "indirizzo": " Via G. B. Gandino, 1/c, 12042 Bra",
+            "desc": ""
+        },
+        {
+            "id": 10,
+            "nome": "RUSTICO Bra",
+            "citta": "Bra",
+            "indirizzo": " Via Alba, 7, 12042 Bra",
+            "desc": "Coltiviamo Pizza"
+        },
+        {
+            "id": 11,
+            "nome": "Osteria Pizzeria Zeus",
+            "citta": "Genola",
+            "indirizzo": " Via Frassinetto, 5, 12040 Genola",
+            "desc": ""
+        },
+        {
+            "id": 12,
+            "nome": "Le Chiacchiere",
+            "citta": "Genola",
+            "indirizzo": " Via G. Marconi, 8, 12040 Genola",
+            "desc": "bar & gastronomia"
+        },
+        {
+            "id": 13,
+            "nome": "Ristorante Aquila Nera",
+            "citta": "Genola",
+            "indirizzo": " Via Roma, 83, 12040 Genola",
+            "desc": ""
+        },
+        {
+            "id": 14,
+            "nome": "Ristorante Kyoto",
+            "citta": "Genola",
+            "indirizzo": " Via Frassinetto, 8, 12040 Genola",
+            "desc": ""
+        },
+        {
+            "id": 15,
+            "nome": "TEATRO DELLA CARNE",
+            "citta": "Genola",
+            "indirizzo": " Via Garetta, 8/d, 12040 Genola",
+            "desc": ""
+        },
+        {
+            "id": 16,
+            "nome": "Osteria K2K",
+            "citta": "Fossano",
+            "indirizzo": " Piazza Kennedy, 29, 12045 Fossano",
+            "desc": ""
+        },
+        {
+            "id": 17,
+            "nome": "Il Drago e la Fata Pizzeria Ristopub",
+            "citta": "Fossano",
+            "indirizzo": " Via Guglielmo Marconi, 1, 12045 Fossano",
+            "desc": ""
+        },
+        {
+            "id": 18,
+            "nome": "Mini Roast Califano",
+            "citta": "Fossano",
+            "indirizzo": " Piazza Luigi Bima, 4, 12045 Fossano",
+            "desc": ""
+        },
+        {
+            "id": 19,
+            "nome": "Il Nilo",
+            "citta": "Fossano",
+            "indirizzo": " Via Guglielmo Marconi, 71, 12045 Fossano",
+            "desc": ""
+        },
+        {
+            "id": 20,
+            "nome": "Il gamberone pazzo",
+            "citta": "Fossano",
+            "indirizzo": " Via Guglielmo Marconi, 72, 12045 Fossano",
+            "desc": ""
+        }
+    ]
+}
