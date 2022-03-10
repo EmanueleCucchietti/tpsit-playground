@@ -1,0 +1,28 @@
+{
+	"citta":[
+		{"id":1,  "nome": "Roma"},
+		{"id":2,  "nome": "Milano"},
+		{"id":3,  "nome": "Napoli"},
+		{"id":4,  "nome": "Torino"},
+		{"id":5,  "nome": "Palermo"},
+		{"id":6,  "nome": "Genova"},
+		{"id":7,  "nome": "Bologna"},
+		{"id":8,  "nome": "Firenze"},
+		{"id":9,  "nome": "Bari"},
+		{"id":10, "nome": "Venezia"},
+
+		{"id":11, "nome": "Trieste"},
+		{"id":12, "nome": "Perugia"},		
+		{"id":13, "nome": "Cagliari"},
+		{"id":14, "nome": "Trento"},
+		{"id":15, "nome": "Ancona"},
+		{"id":16, "nome": "Catanzaro"},
+		{"id":17, "nome": "L'Aquila"},
+		{"id":18, "nome": "Potenza"},
+		{"id":19, "nome": "Campobasso"},
+		{"id":20, "nome": "Aosta"}
+	]
+	
+}
+
+
