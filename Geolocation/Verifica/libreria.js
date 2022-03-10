@@ -6,7 +6,7 @@ function loadGoogleApi() {
 		script.type = 'text/javascript';
 		script.src = URL + '/js?v=3&key=' + MAP_KEY;
 		script.onload = () => resolve()
-		script.onerror = reject
+		script.onerror = function() {reject(new Error("errore sul caricamento"))}
 	})
 }
 function generaColore() {
