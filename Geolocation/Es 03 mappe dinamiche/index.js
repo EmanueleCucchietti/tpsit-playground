@@ -16,7 +16,7 @@ function documentReady() {
 	let wrapper = $("#wrapper")[0]
 	// vallauri    // LatLng non accetta stringhe
 	let position = new google.maps.LatLng(44.5557763, 7.7347183);
-
+	console.log(position)
 	let mapOptions = {
 		"center": position,
 		"zoom": 16,

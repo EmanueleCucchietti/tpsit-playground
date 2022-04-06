@@ -1,0 +1,17 @@
+<h1> {{ title }}</h1>
+
+<button [disabled]="clicked" (click)="handleClick()">
+    click Me
+</button>
+
+<div *ngFor="let boat of boats">
+    <h3 [ngClass]="{
+        'green': boat.name === 'Starfire',
+        'red': boat.name === 'Oracle'
+    }">
+        {{ boat.name }}
+    </h3>
+    <img [src]="boat.img" width="200px">
+    <p> Built in {{ boat.year }}</p>
+
+</div>

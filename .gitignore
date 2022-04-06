@@ -11,3 +11,5 @@
 /Geolocation/Es 03 mappe dinamiche/environment.js
 /Geolocation/Es 05 percorso/environment.js
 /Geolocation/Verifica/environment.js
+
+**/node_modules
