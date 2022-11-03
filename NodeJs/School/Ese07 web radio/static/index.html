@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>web radio</title>
+    <script type="application/javascript" src="jquery.js"></script>
+    <script type="application/javascript" src="index.js"></script>
+    <style>
+        #wrapper {
+            width: 300px;
+            margin: 20px auto;
+            background-color: #ffa;
+            font-size: 13pt;
+            padding: 20px;
+            padding-left: 35px;
+            font-style: italic;
+            font-weight: bold;
+            border-radius: 15px;
+            border: 1px solid blue;
+        }
+        
+        #wrapper p {
+            width: 250px;
+            margin: 5px 20px;
+            padding: 0px;
+        }
+        
+        #wrapper select {
+            width: 250px;
+            margin: 10px 20px;
+            padding: 5px;
+        }
+        
+        #table {
+            background-color: #ddd;
+            margin: 20px auto;
+            paddig: 10px;
+            width: 750px;
+            overflow: auto;
+            border-radius: 10px;
+            border: 1px solid blue;
+        }
+        
+        #table thead {
+            /* display: block; */
+        }
+        
+        #table tbody {
+           /* height: 500px;   */
+           /* display: block;  */
+           /* overflow-y: auto; */
+        }
+        
+        #table th {
+            border: 1px solid black;
+        }
+        
+        #table td {
+            text-align: center;
+        }
+        
+        #dettagli {
+            background-color: #ddd;
+            margin: 20px auto;
+            padding: 15px;
+            width: 350px;
+            height: 220px;
+            border-radius: 15px;
+            border: 1px solid blue;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1 style="text-align:center;">The Best Italian Web Radios</h1>
+
+    <div id="wrapper">
+        <p> Seleziona una regione: </p>
+        <select id="lstRegioni">
+			<option value="tutti"> tutti </option>
+		</select>
+    </div>
+
+    <table id="table">
+        <thead id="thead">
+			<th width="60" > </th>
+			<th width="300"> nome </th>
+			<th width="100"> codec </th>
+			<th width="100"> bitrate </th>
+			<th width="100"> votes </th>
+			<th> </th>
+		</thead>
+        <tbody id="tbody"> </tbody>
+    </table>
+
+    <div id="dettagli">
+    </div>  
+
+</body>
+
+</html>

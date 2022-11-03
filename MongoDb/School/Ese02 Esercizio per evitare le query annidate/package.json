@@ -1,0 +1,16 @@
+{
+  "name": "ese01-node-and-mongo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dispatcher_simone_fiorentino": "^2.1.0",
+    "mongodb": "^4.10.0"
+  }
+}

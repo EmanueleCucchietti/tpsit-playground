@@ -1,0 +1,6 @@
+[ {"_id": 1,  "cust_id": "abc1",  "status": "A",  "amount": 50,  "qta":30,  "nDettagli" : [7, 12, 11]  },
+  {"_id": 2,  "cust_id": "xyz1",  "status": "A",  "amount": 100, "qta":46,  "nDettagli" : [10, 16, 20]  },
+  {"_id": 3,  "cust_id": "xyz1",  "status": "D",  "amount": 25,  "qta":70,  "nDettagli" : [30, 20, 20]  },
+  {"_id": 4,  "cust_id": "xyz1",  "status": "D",  "amount": 125, "qta":20,  "nDettagli"  : [5, 10, 5]  },
+  {"_id": 5,  "cust_id": "abc1",  "status": "A",  "amount": 25,  "qta":32,  "nDettagli" : [10, 10, 12]  }
+]

@@ -1,0 +1,79 @@
+﻿<!doctype html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ese 05 Persons</title>
+    <link rel="icon" href="favicon.ico" type="image/ico" />
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="libreria.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="index.js"></script>
+</head>
+
+<body>
+    <div class="container" style="padding-top:15px;">
+        <!-- Titolo -->
+        <div class="row align-items-center">
+            <div class="col-sm-2"> </div>
+            <div class="col-sm-8 text-center" style="padding:15px;">
+                <img src="img/vallauri.jpg" class="img-fluid">
+            </div>
+            <div class="col-sm-2"> </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Scegli una nazione
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="lstNazioni">
+                <!-- 
+                <a class="dropdown-item" href="#">Item</a>
+                <a class="dropdown-item" href="#">Another Item</a>
+                -->
+            </div>
+        </div>
+
+        <!-- elenco studenti-->
+        <table class="table table-hover" style="margin-top:10px;">
+            <thead>
+                <tr>
+                    <th width="25%">Name</th>
+                    <th width="16%">City</th>
+                    <th width="15%">State</th>
+                    <th width="20%">Cell</th>
+                    <th width="12%">Dettagli</th>
+                    <th width="12%">Elimina</th>
+                </tr>
+            </thead>
+            <tbody id="tabStudenti">
+
+            </tbody>
+        </table>
+
+
+        <div class="card" style="width: 36em; margin:30px auto;" id="divDettagli">
+            <img class="card-img-top" style="width:10em" src="">
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text"></p>
+                <a href="#" class="btn btn-secondary">First</a>
+                <a href="#" class="btn btn-secondary">Previous</a>
+                <a href="#" class="btn btn-secondary">Next</a>
+                <a href="#" class="btn btn-secondary">Last</a>
+            </div>
+        </div>
+
+    </div>
+    <!-- end container -->
+
+</body>
+
+</html>

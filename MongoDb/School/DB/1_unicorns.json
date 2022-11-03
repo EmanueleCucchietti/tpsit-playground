@@ -1,0 +1,13 @@
+[ {"name":"Horny",  "dob":"1992-02-13", "loves": ["carrot","papaya"], "weight": 600, "gender": "m", "vampires":63, "hair":"grey"},
+  {"name":"Aurora", "dob":"1991-01-24", "loves": ["carrot","grape"], "weight": 450, "gender": "f", "vampires": 43, "hair":"blonde"},
+  {"name":"Unico",  "dob":"1973-01-09", "loves": ["energon","strawberry"], "weight": 984, "gender": "m", "vampires": 182, "hair":"brown"},
+  {"name":"Roodles","dob":"1979-07-18", "loves": ["apple"], "weight": 575, "gender": "m", "vampires": 99, "hair":"brown"},
+  {"name":"Solnara","dob":"1985-06-04", "loves": ["apple","carrot","chocolate"], "weight":550, "gender":"f", "vampires":80, "hair":"grey"},
+  {"name":"Ayna",   "dob":"1998-02-07", "loves": ["strawberry","lemon"], "weight":733, "gender":"f", "vampires": 40, "hair":"brown"},
+  {"name":"Kenny",  "dob":"1997-06-01", "loves": ["grape","lemon"], "weight": 690, "gender": "m", "vampires": 39, "hair":"grey"},
+  {"name":"Raleigh","dob":"2005-04-03", "loves": ["apple", "sugar"], "weight": 421, "gender": "m", "vampires": 2, "hair":"brown"},
+  {"name":"Leia",   "dob":"2001-09-08", "loves": ["apple", "watermelon"], "weight":601, "gender":"f", "vampires": 33, "hair":"blonde"},
+  {"name":"Pilot",  "dob":"1997-02-01", "loves": ["apple", "watermelon"], "weight":650, "gender":"m", "vampires": 54, "hair":"brown"},
+  {"name":"Nimue",  "dob":"1999-11-20", "loves": ["grape", "energon"], "weight": 540, "gender": "f", "hair":"blonde", "vaccinated":true},
+  {"name":"Dunx",   "dob":"1976-06-18", "loves": ["grape", "watermelon"], "weight":704, "gender":"m", "vampires":165, "hair":"grey"}
+]

@@ -1,0 +1,37 @@
+
+h1{
+	text-align:center;
+	font-size:30pt;
+}
+
+div.image{
+	width:540px;
+	margin:15px auto;
+}
+
+#wrapper{
+	width:160px;
+	margin: 20px auto;
+	background-color:#ffa;
+	font-size:18pt;
+	padding:20px;
+	padding-left:40px;
+	font-style:italic;
+	font-weight:bold;
+	border-radius:15px;
+	border:1px solid blue;
+}
+
+table{
+	background-color:#ddd;
+	margin: 20px auto;
+	padding:10px;
+	width:700px;
+	border-radius:15px;
+	border:1px solid blue;
+}
+
+table td{
+	text-align:center;
+}
+

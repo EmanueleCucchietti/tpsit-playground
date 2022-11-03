@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "dispatcher_simone_fiorentino": "^2.0.0",
+    "sweetalert2": "^11.5.1"
+  }
+}

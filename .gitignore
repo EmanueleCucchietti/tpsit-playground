@@ -1,9 +1,7 @@
 #Project My WriteRead Mongoose
 /MongoDb/My WriteRead Mongoose/secret
-/MongoDb/My WriteRead Mongoose/node_modules
 
 #Project Test1 - Cordova
-/Cordova/test1-RandomUser/node_modules
 /Cordova/test1-RandomUser/platforms
 
 #Geolocation
@@ -13,3 +11,5 @@
 /Geolocation/Verifica/environment.js
 
 **/node_modules
+node_modules
+node_modules/
