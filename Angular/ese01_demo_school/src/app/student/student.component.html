@@ -1,0 +1,17 @@
+<p *ngFor="let student of studentList"> 
+    Student {{student.name}} from {{student.city}} is {{student.present}}
+    <!-- /If Semplice -->
+    <!-- <span *ngIf="student.present"> and is present</span>
+    <span *ngIf="!student.present"> and is absent</span> -->
+    <!-- /If Semplice -->
+
+    <!-- /If con ng-template -->
+    <!-- <span *ngIf="student.present; else printAbsent"> and is present</span>
+    <ng-template #printAbsent>
+        <span *ngIf="!student.present"> and is absent</span>
+    </ng-template> -->
+    <!-- /If con ng-template -->
+
+    <!-- /For  -->
+
+</p>
