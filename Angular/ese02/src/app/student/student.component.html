@@ -1,0 +1,14 @@
+<span
+  [ngStyle]="getStyle(student)"
+  [ngClass]="getClasses(student)"
+  (click)="ngOnClick()"
+  class="cliccable">
+  <!-- [ngStyle]="{'background-color': student.gender == 'F' ? 'pink':'cyan'}" -->
+  <!-- [ngClass]="{'underlined': !student.present, 'blink': student.city == 'Fossano'}" -->
+
+  - student {{student.name}} from {{student.city}} is
+  <span *ngIf="student.present;else printAbsent">Present</span>
+  <!--<span *ngIf="!student.present">Absent</span>-->
+
+  <ng-template #printAbsent><span>Absent</span></ng-template>
+</span>

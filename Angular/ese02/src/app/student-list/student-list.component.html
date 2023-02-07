@@ -1,0 +1,30 @@
+<div class="wrapper">
+  <!-- TITLE-->
+  <h2>Add Sudent</h2>
+
+  <!-- ADD DATA-->
+  <p>
+    <label for="txtName">Student name:</label>
+    <input type="text" id="txtName" #txtName [(ngModel)]="studentName" placeholder="Student name">
+  </p>
+  <br>
+  <p><select class="city" [(ngModel)]="studentCity" (change)="onChangeCity()">
+      <option *ngFor="let city of cities">
+        {{city}}
+      </option>
+    </select></p>
+
+  <button class="add" (click)="onCreateStudent()" [disabled]="!studentName">Add Student</button>
+
+
+  <!-- STUDENT LIST -->
+  <div class="student" *ngFor="let item of studentList; let i = index">
+    <span>{{i}} => </span>
+    <app-student [student]="item"></app-student>
+    &nbsp;
+    <button (click)="onRemoveStudent(i)"> Delete </button>
+
+  </div>
+
+
+</div>

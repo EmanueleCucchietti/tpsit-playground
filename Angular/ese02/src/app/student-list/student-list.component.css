@@ -1,0 +1,27 @@
+.wrapper
+{
+  text-align: center;
+}
+.student{
+  margin-top: 10px;
+}
+.add{
+  margin-top: 10px;
+  background-color: #232323;
+  color: #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.add:disabled{
+  background-color: #777;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.gender{
+
+}
